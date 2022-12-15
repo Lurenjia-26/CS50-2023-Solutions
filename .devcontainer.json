@@ -23,7 +23,7 @@
     8080,
     8082
   ],
-  "image": "ghcr.io/cs50/codespace:694c6c524ceb9dcca150ce1d278b5fa0c61b8a47",
+  "image": "ghcr.io/cs50/codespace:9260110b61400782472ceb09246c0012531f4741",
   "postCreateCommand": "/opt/cs50/bin/postCreateCommand",
   "settings": {
     "C_Cpp.autocomplete": "Disabled",
@@ -92,6 +92,7 @@
     "gitdoc.commitValidationLevel": "none",
     "gitdoc.enabled": true,
     "gitdoc.pullOnOpen": false,
+    "github.codespaces.devcontainerChangedNotificationStyle": "none",
     "github.gitAuthentication": true,
     "html.suggest.html5": false,
     "java.configuration.runtimes": [

@@ -9,7 +9,14 @@ int main(void)
     {
         for(int j = 0; j < h; j++)
         {
-            
+            if (j < h - i - 1)
+            {
+                printf(" ");
+            }
+            else
+            {
+                printf("#");
+            }
         }
         printf("\n");
     }

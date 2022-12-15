@@ -7,6 +7,10 @@ int main(void)
 
     for (int i = 0; i < h; i++)
     {
-        
+        for(int j = 0; j < h; j++)
+        {
+            
+        }
+        printf("\n");
     }
 }

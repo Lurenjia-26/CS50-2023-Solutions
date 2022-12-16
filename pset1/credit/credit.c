@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    long num;
+    long num, tmp_num;
     int digits = 1;
     bool isValid = false;
 
@@ -12,7 +12,7 @@ int main(void)
         num = get_long("Number: ");
 
         //算出位数
-        for (long tmp_num = num; tmp_num > 10; digits++)
+        for (tmp_num = num; tmp_num > 10; digits++)
         {
         tmp_num /= 10;
         }
@@ -20,7 +20,7 @@ int main(void)
         if (digits == 13 || digits == 15 || digits == 16)
         {
             //如果位数有效，则进行更精确的号码真伪识别
-            for (digits = 1, long tmp_num = num; tmp_num > 10; )
+            for (digits = 1, tmp_num = num; tmp_num > 10; )
             {
 
             }

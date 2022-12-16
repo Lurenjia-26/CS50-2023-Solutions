@@ -44,6 +44,11 @@ int main(void)
             //与未乘的数加起来
             for (int i = 0; i < digits; i += 2)
             {
+                sum += a[i];
+            }
+            if (sum % 10 == 0)
+            {
+                isValid = true;
             }
         }
         if (!isValid)

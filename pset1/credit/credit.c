@@ -24,7 +24,7 @@ int main(void)
         if (digits == 13 || digits == 15 || digits == 16)
         {
             //将每一位数储存在数组中
-            for (digits = 1, tmp_num = num; tmp_num > 10; digits++)
+            for (digits = 0, tmp_num = num; tmp_num > 10; digits++)
             {
                 a[digits] = tmp_num % 10;
                 tmp_num /= 10;
@@ -38,11 +38,15 @@ int main(void)
                 }
                 else
                 {
-
                     sum += a[i] / 5 + (a[i] * 2) % 10;
                 }
             }
-            printf("sum = %d", sum);
+            printf("a[] = ");
+            for (int i = 0; i <= digits; i++)
+            {
+                printf("%d", a[i]);
+            }
+            printf("\nsum = %d\n", sum);
         }
         if (!isValid)
         {

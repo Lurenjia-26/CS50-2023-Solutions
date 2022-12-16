@@ -55,7 +55,7 @@ int main(void)
         }
         else if (num >= 37 && num < 38)
         {
-            printf("America Express\n");
+            printf("AMEX\n");
         }
         else if (num >= 400 && num < 500)
         {
@@ -63,7 +63,7 @@ int main(void)
         }
         else if (num >= 510 && num < 550)
         {
-            printf("MarsterCard\n");
+            printf("MARSTERCARD\n");
         }
         else
         {

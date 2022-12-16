@@ -6,8 +6,7 @@ int main(void)
 {
     long num, tmp_num;
     int digits = 1;
-    int a0[LENGTH] = { 0 };
-    int a1[LENGTH / 2] = { 0 };
+    int a[LENGTH] = { 0 };
     int sum = 0;
     bool isValid = false;
 
@@ -30,11 +29,19 @@ int main(void)
                 a[digits] = tmp_num % 10;
                 tmp_num /= 10;
             }
-            //隔一位乘2
-            for (int i = 0; i < digits / 2; i++)
+            //隔一位乘2并求和
+            for (int i = 0; i < digits; i += 2)
             {
-                a1[i] = a[i] * 2;
+                if (a[i] < 5)
+                {
+                    sum += a[i] * 2;
+                }
+                else
+                {
+                    sum += a[i] / 10 + a[i] % 10;
+                }
             }
+            printf("sum = %d", sum);
         }
         if (!isValid)
         {

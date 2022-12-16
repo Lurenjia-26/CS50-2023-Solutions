@@ -61,7 +61,7 @@ int main(void)
         {
             printf("VISA\n");
         }
-        else if (num >= 5100 && num < 5500)
+        else if (num >= 5100 && num < 5600)
         {
             printf("MASTERCARD\n");
         }

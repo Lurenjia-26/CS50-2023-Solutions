@@ -44,14 +44,14 @@ int main(void)
     }
     else
     {
-        printf("num = %ld", num);
+        num /= 1e13;
         if (num >= 4 && num < 5)
         {
             printf("VISA\n");
         }
         else if (num >= 34 && num < 35)
         {
-            printf("America Express\n");
+            printf("AMEX\n");
         }
         else if (num >= 37 && num < 38)
         {
@@ -61,7 +61,7 @@ int main(void)
         {
             printf("VISA\n");
         }
-        else if (num >= 510 && num < 550)
+        else if (num >= 510 && num < 5500)
         {
             printf("MarsterCard\n");
         }

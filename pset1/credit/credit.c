@@ -20,9 +20,9 @@ int main(void)
         if (digits == 13 || digits == 15 || digits == 16)
         {
             //如果位数有效，则进行更精确的号码真伪识别
-            for (digits = 1, tmp_num = num; tmp_num > 10; )
+            for (digits = 1, tmp_num = num; tmp_num > 10; digits++)
             {
-
+                tmp_num /= 10;
             }
         }
         if (!isValid)
@@ -30,5 +30,5 @@ int main(void)
             printf("foo\n");
         }
     }
-    while (!isValid)
+    while (!isValid);
 }

@@ -24,13 +24,13 @@ int main(void)
         if (digits == 13 || digits == 15 || digits == 16)
         {
             //将每一位数储存在数组中
-            for (digits = 0, tmp_num = num; tmp_num > 10; digits++)
+            for (digits = 0, tmp_num = num; tmp_num >= 10; digits++)
             {
                 a[digits] = tmp_num % 10;
                 tmp_num /= 10;
             }
             //隔一位乘2并求和
-            for (int i = 1; i < digits; i += 2)
+            for (int i = 1; i <= digits; i += 2)
             {
                 if (a[i] < 5)
                 {

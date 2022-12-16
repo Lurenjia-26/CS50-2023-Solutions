@@ -5,6 +5,7 @@ int main(void)
 {
     long num, tmp_num;
     int digits = 1;
+    int a[20] = { 0 };
     bool isValid = false;
 
     do
@@ -22,7 +23,7 @@ int main(void)
             //如果位数有效，则进行更精确的号码真伪识别
             for (digits = 1, tmp_num = num; tmp_num > 10; digits++)
             {
-                tmp_num /= 10;
+                a[20 - digits] = tmp_num % 10;
             }
         }
         if (!isValid)

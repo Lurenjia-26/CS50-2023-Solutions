@@ -11,6 +11,11 @@ int main(void)
     {
         tmp_num /= 10;
     }
+    if (digits == 13 || digits == 15 || digits == 16)
+    {
+        //进行
+
+    }
     if (!isValid)
     {
         printf("foo\n");

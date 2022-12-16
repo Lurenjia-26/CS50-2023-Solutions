@@ -8,8 +8,8 @@ int main(void)
     int a[20] = { 0 };
     bool isValid = false;
 
-    do
-    {
+    // do
+    // {
         num = get_long("Number: ");
 
         //算出位数
@@ -24,12 +24,17 @@ int main(void)
             for (digits = 1, tmp_num = num; tmp_num > 10; digits++)
             {
                 a[20 - digits] = tmp_num % 10;
+                tmp_num /= 10;
             }
+        }
+        for (int i = 19; i > 0; i--)
+        {
+            printf("%d", a[i]);
         }
         if (!isValid)
         {
             printf("foo\n");
         }
-    }
-    while (!isValid);
+    // }
+    // while (!isValid);
 }

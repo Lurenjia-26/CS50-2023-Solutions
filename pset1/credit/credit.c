@@ -53,9 +53,9 @@ int main(void)
         }
         if (!isValid)
         {
-            printf("foo\n");
+            printf("INVALID");
         }
     }
     while (!isValid);
-    
+
 }

@@ -5,7 +5,7 @@
 int main(void)
 {
     double num, tmp_num;
-    int digits = 1;
+    int digits;
     double a[LENGTH] = {0};
     int sum = 0;
 

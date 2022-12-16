@@ -27,13 +27,13 @@ int main(void)
             //将每一位数储存在数组中
             for (digits = 1, tmp_num = num; tmp_num > 10; digits++)
             {
-                a[LENGTH - digits] = tmp_num % 10;
+                a[digits] = tmp_num % 10;
                 tmp_num /= 10;
             }
             //隔一位乘2
             for (int i = 0; i < LENGTH / 2; i++)
             {
-                a1[i] = a[i];
+                a1[i] = a[i] * 2;
             }
         }
         if (!isValid)

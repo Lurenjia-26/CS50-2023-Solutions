@@ -4,14 +4,14 @@
 
 int main(void)
 {
-    double num, tmp_num;
-    int digits;
-    double a[LENGTH] = {0};
+    long num, tmp_num;
+    int digits = 1;
+    int a[LENGTH] = {0};
     int sum = 0;
 
     do
     {
-        num = get_double("Number: ");
+        num = get_long("Number: ");
     } while (num <= 0 || num >= 1e17);
 
     // 将每一位数储存在数组中
@@ -44,23 +44,24 @@ int main(void)
     }
     else
     {
-        if (num >= 4e13 && num < 5e13)
+        num /= 1e13;
+        if (num >= 4 && num < 5)
         {
             printf("VISA\n");
         }
-        else if (num >= 3.4e15 && num < 3.5e15)
+        else if (num >= 340 && num < 350)
         {
             printf("America Express\n");
         }
-        else if (num >= 3.7e15 && num < 3.8e15)
+        else if (num >= 370 && num < 380)
         {
             printf("America Express\n");
         }
-        else if (num >= 4e16 && num < 5e16)
+        else if (num >= 4000 && num < 5000)
         {
             printf("VISA\n");
         }
-        else if (num >= 5.1e16 && num < 5.6e16)
+        else if (num >= 5100 && num < 5500)
         {
             printf("MarsterCard\n");
         }

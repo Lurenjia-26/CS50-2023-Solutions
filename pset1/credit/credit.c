@@ -37,12 +37,32 @@ int main(void)
     {
         sum += a[i];
     }
+    //有效性判断
     if (sum % 10 != 0)
     {
         printf("INVALID\n");
     }
     else
     {
-        if (num )
+        if (num >= 4e13 && num < 5e13)
+        {
+            printf("VISA\n");
+        }
+        else if (num >= 3.4e15 && num < 3.5e15)
+        {
+            printf("America Express\n");
+        }
+        else if (num >= 3.7e15 && num < 3.8e15)
+        {
+            printf("America Express\n");
+        }
+        else if (num >= 4e16 && num < 5e16)
+        {
+            printf("VISA\n");
+        }
+        else if (num >= 5.1e16 && num < 5.6e16)
+        {
+            printf("MarsterCard\n");
+        }
     }
 }

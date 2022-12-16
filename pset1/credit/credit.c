@@ -38,7 +38,8 @@ int main(void)
                 }
                 else
                 {
-                    sum += a[i] / 10 + a[i] % 10;
+
+                    sum += a[i] / 5 + (a[i] * 2) % 10;
                 }
             }
             printf("sum = %d", sum);

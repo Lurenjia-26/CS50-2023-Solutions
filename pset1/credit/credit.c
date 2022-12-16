@@ -65,5 +65,9 @@ int main(void)
         {
             printf("MarsterCard\n");
         }
+        else
+        {
+            printf("INVALID\n");
+        }
     }
 }

@@ -63,7 +63,7 @@ int main(void)
         }
         else if (num >= 5100 && num < 5500)
         {
-            printf("MARSTERCARD\n");
+            printf("MASTERCARD\n");
         }
         else
         {

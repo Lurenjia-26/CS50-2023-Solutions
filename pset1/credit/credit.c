@@ -7,6 +7,7 @@ int main(void)
     long num, tmp_num;
     int digits = 1;
     int a[LENGTH] = { 0 };
+    int sum = 0;
     bool isValid = false;
 
     do
@@ -31,7 +32,7 @@ int main(void)
             //求和
             for (int i = LENGTH - 2; i > LENGTH -1 - digits; i -= 2)
             {
-                
+                sum += a[i];
             }
         }
         if (!isValid)

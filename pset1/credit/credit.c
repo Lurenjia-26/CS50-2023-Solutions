@@ -3,5 +3,7 @@
 
 int main(void)
 {
+    int num = get_long("Number: ");
+
     
 }

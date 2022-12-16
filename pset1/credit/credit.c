@@ -4,14 +4,14 @@
 
 int main(void)
 {
-    long num, tmp_num;
+    double num, tmp_num;
     int digits = 1;
-    int a[LENGTH] = {0};
+    double a[LENGTH] = {0};
     int sum = 0;
 
     do
     {
-        num = get_long("Number: ");
+        num = get_double("Number: ");
     } while (num <= 0 || num >= 1e17);
 
     // 将每一位数储存在数组中

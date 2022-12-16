@@ -41,12 +41,10 @@ int main(void)
                     sum += a[i] / 5 + (a[i] * 2) % 10;
                 }
             }
-            printf("a[] = ");
-            for (int i = 0; i < digits; i++)
+            //与未乘的数加起来
+            for (int i = 0; i < digits; i += 2)
             {
-                printf("%d", a[i]);
             }
-            printf("\nsum = %d\n", sum);
         }
         if (!isValid)
         {

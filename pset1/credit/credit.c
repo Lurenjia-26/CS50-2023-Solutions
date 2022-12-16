@@ -3,10 +3,11 @@
 
 int main(void)
 {
-    long num = get_long("Number: ");
+    long num
     int digits = 1;
     bool isValid = false;
 
+    num = get_long("Number: ");
     //算出位数
     for (long tmp_num = num; tmp_num > 10; digits++)
     {

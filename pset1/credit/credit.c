@@ -43,6 +43,6 @@ int main(void)
     }
     else
     {
-        
+        if (num )
     }
 }

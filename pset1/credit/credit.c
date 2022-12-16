@@ -11,6 +11,4 @@ int main(void)
         tmp_num /= 10;
     }
 
-    printf("%l has %d digits\n", num, digits);
-
 }

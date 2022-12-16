@@ -30,7 +30,7 @@ int main(void)
                 tmp_num /= 10;
             }
             //隔一位乘2并求和
-            for (int i = 0; i < digits; i += 2)
+            for (int i = 1; i < digits; i += 2)
             {
                 if (a[i] < 5)
                 {

@@ -3,7 +3,14 @@
 
 int main(void)
 {
-    int num = get_long("Number: ");
+    long num = get_long("Number: ");
+    int digits = 1;
 
-    
+    for (long tmp_num = num; tmp_num > 10; digits++)
+    {
+        tmp_num /= 10;
+    }
+
+    printf("%l has %d digits\n", num, digits);
+
 }

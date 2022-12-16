@@ -1,15 +1,16 @@
 #include <cs50.h>
 #include <stdio.h>
+#define LENGTH 20
 
 int main(void)
 {
     long num, tmp_num;
     int digits = 1;
-    int a[20] = { 0 };
+    int a[LENGTH] = { 0 };
     bool isValid = false;
 
-    // do
-    // {
+    do
+    {
         num = get_long("Number: ");
 
         //算出位数
@@ -18,23 +19,25 @@ int main(void)
             tmp_num /= 10;
         }
 
+        //如果位数有效，则进行更精确的号码真伪识别
         if (digits == 13 || digits == 15 || digits == 16)
         {
-            //如果位数有效，则进行更精确的号码真伪识别
+            //将每一位数储存在数组中
             for (digits = 1, tmp_num = num; tmp_num > 10; digits++)
             {
-                a[20 - digits] = tmp_num % 10;
+                a[LENGTH - digits] = tmp_num % 10;
                 tmp_num /= 10;
             }
-        }
-        for (int i = 19; i > 0; i--)
-        {
-            printf("%d", a[i]);
+            //求和
+            for (int i = LENGTH - 2; i > LENGTH -1 - digits; i -= 2)
+            {
+                
+            }
         }
         if (!isValid)
         {
             printf("foo\n");
         }
-    // }
-    // while (!isValid);
+    }
+    while (!isValid);
 }

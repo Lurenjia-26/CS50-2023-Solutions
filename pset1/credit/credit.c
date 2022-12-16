@@ -12,7 +12,8 @@ int main(void)
     do
     {
         num = get_long("Number: ");
-    } while (num <= 0 || num >= 1e17);
+    }
+    while (num <= 0 || num >= 1e17);
 
     // 将每一位数储存在数组中
     for (digits = 0, tmp_num = num; tmp_num > 1; digits++)

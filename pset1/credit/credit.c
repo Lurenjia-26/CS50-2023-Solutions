@@ -14,7 +14,7 @@ int main(void)
         //算出位数
         for (tmp_num = num; tmp_num > 10; digits++)
         {
-        tmp_num /= 10;
+            tmp_num /= 10;
         }
 
         if (digits == 13 || digits == 15 || digits == 16)

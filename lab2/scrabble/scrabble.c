@@ -25,7 +25,7 @@ int main(void)
     }
     else
     {
-        printf("Player %d wins!\n", score1 > score2 ? score1 : score2);
+        printf("Player %d wins!\n", score1 > score2 ? 1 : 2);
     }
 }
 
@@ -39,82 +39,82 @@ int compute_score(string word)
         switch (tolower(word[i]))
         {
         case 'a':
-            sum += POINTS[0];
+            score += POINTS[0];
             break;
         case 'b':
-            sum += POINTS[1];
+            score += POINTS[1];
             break;
         case 'c':
-            sum += POINTS[2];
+            score += POINTS[2];
             break;
         case 'd':
-            sum += POINTS[3];
+            score += POINTS[3];
             break;
         case 'e':
-            sum += POINTS[4];
+            score += POINTS[4];
             break;
         case 'f':
-            sum += POINTS[5];
+            score += POINTS[5];
             break;
         case 'g':
-            sum += POINTS[6];
+            score += POINTS[6];
             break;
         case 'h':
-            sum += POINTS[7];
+            score += POINTS[7];
             break;
         case 'i':
-            sum += POINTS[8];
+            score += POINTS[8];
             break;
         case 'j':
-            sum += POINTS[9];
+            score += POINTS[9];
             break;
         case 'k':
-            sum += POINTS[10];
+            score += POINTS[10];
             break;
         case 'l':
-            sum += POINTS[11];
+            score += POINTS[11];
             break;
         case 'm':
-            sum += POINTS[12];
+            score += POINTS[12];
             break;
         case 'n':
-            sum += POINTS[13];
+            score += POINTS[13];
             break;
         case 'o':
-            sum += POINTS[14];
+            score += POINTS[14];
             break;
         case 'p':
-            sum += POINTS[15];
+            score += POINTS[15];
             break;
         case 'q':
-            sum += POINTS[16];
+            score += POINTS[16];
             break;
         case 'r':
-            sum += POINTS[17];
+            score += POINTS[17];
             break;
         case 's':
-            sum += POINTS[18];
+            score += POINTS[18];
             break;
         case 't':
-            sum += POINTS[19];
+            score += POINTS[19];
             break;
         case 'u':
-            sum += POINTS[20];
+            score += POINTS[20];
             break;
         case 'v':
-            sum += POINTS[21];
+            score += POINTS[21];
             break;
         case 'w':
-            sum += POINTS[22];
+            score += POINTS[22];
             break;
         case 'x':
-            sum += POINTS[23];
+            score += POINTS[23];
             break;
         case 'y':
-            sum += POINTS[24];
+            score += POINTS[24];
             break;
         case 'z':
-            sum += POINTS[25];
+            score += POINTS[25];
             break;
         }
     }

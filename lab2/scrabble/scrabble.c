@@ -38,84 +38,84 @@ int compute_score(string word)
     {
         switch (tolower(word[i]))
         {
-        case 'a':
-            score += POINTS[0];
-            break;
-        case 'b':
-            score += POINTS[1];
-            break;
-        case 'c':
-            score += POINTS[2];
-            break;
-        case 'd':
-            score += POINTS[3];
-            break;
-        case 'e':
-            score += POINTS[4];
-            break;
-        case 'f':
-            score += POINTS[5];
-            break;
-        case 'g':
-            score += POINTS[6];
-            break;
-        case 'h':
-            score += POINTS[7];
-            break;
-        case 'i':
-            score += POINTS[8];
-            break;
-        case 'j':
-            score += POINTS[9];
-            break;
-        case 'k':
-            score += POINTS[10];
-            break;
-        case 'l':
-            score += POINTS[11];
-            break;
-        case 'm':
-            score += POINTS[12];
-            break;
-        case 'n':
-            score += POINTS[13];
-            break;
-        case 'o':
-            score += POINTS[14];
-            break;
-        case 'p':
-            score += POINTS[15];
-            break;
-        case 'q':
-            score += POINTS[16];
-            break;
-        case 'r':
-            score += POINTS[17];
-            break;
-        case 's':
-            score += POINTS[18];
-            break;
-        case 't':
-            score += POINTS[19];
-            break;
-        case 'u':
-            score += POINTS[20];
-            break;
-        case 'v':
-            score += POINTS[21];
-            break;
-        case 'w':
-            score += POINTS[22];
-            break;
-        case 'x':
-            score += POINTS[23];
-            break;
-        case 'y':
-            score += POINTS[24];
-            break;
-        case 'z':
-            score += POINTS[25];
-            break;
+            case 'a':
+                score += POINTS[0];
+                break;
+            case 'b':
+                score += POINTS[1];
+                break;
+            case 'c':
+                score += POINTS[2];
+                break;
+            case 'd':
+                score += POINTS[3];
+                break;
+            case 'e':
+                score += POINTS[4];
+                break;
+            case 'f':
+                score += POINTS[5];
+                break;
+            case 'g':
+                score += POINTS[6];
+                break;
+            case 'h':
+                score += POINTS[7];
+                break;
+            case 'i':
+                score += POINTS[8];
+                break;
+            case 'j':
+                score += POINTS[9];
+                break;
+            case 'k':
+                score += POINTS[10];
+                break;
+            case 'l':
+                score += POINTS[11];
+                break;
+            case 'm':
+                score += POINTS[12];
+                break;
+            case 'n':
+                score += POINTS[13];
+                break;
+            case 'o':
+                score += POINTS[14];
+                break;
+            case 'p':
+                score += POINTS[15];
+                break;
+            case 'q':
+                score += POINTS[16];
+                break;
+            case 'r':
+                score += POINTS[17];
+                break;
+            case 's':
+                score += POINTS[18];
+                break;
+            case 't':
+                score += POINTS[19];
+                break;
+            case 'u':
+                score += POINTS[20];
+                break;
+            case 'v':
+                score += POINTS[21];
+                break;
+            case 'w':
+                score += POINTS[22];
+                break;
+            case 'x':
+                score += POINTS[23];
+                break;
+            case 'y':
+                score += POINTS[24];
+                break;
+            case 'z':
+                score += POINTS[25];
+                break;
         }
     }
     return score;

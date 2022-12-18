@@ -38,7 +38,7 @@ int count_letters(string text)
 {
     int count = 0;
 
-    for (int i = 0; i < strlen(text); i++)
+    for (int i = 0, n = strlen(text); i < n; i++)
     {
         if (isalnum(text[i]))
         {
@@ -54,7 +54,7 @@ int count_words(string text)
     int count = 0;
     char pre_letter = ' ';
 
-    for (int i = 0; i < strlen(text); i++)
+    for (int i = 0, n = strlen(text); i < n; i++)
     {
         if (isalnum(text[i]) && isspace(pre_letter))
         {
@@ -70,7 +70,7 @@ int count_sentences(string text)
 {
     int count = 0;
 
-    for (int i = 0; i < strlen(text); i++)
+    for (int i = 0, n = strlen(text); i < n; i++)
     {
         if (text[i] == '.' || text[i] == '!' || text[i] == '?')
         {

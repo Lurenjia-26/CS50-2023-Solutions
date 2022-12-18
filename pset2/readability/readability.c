@@ -19,10 +19,7 @@ int main(void)
     letters = count_letters(text);
     words = count_words(text);
     sentences = count_sentences(text);
-    l = letters * 100.0 / words;
-    s = sentences * 100.0 / words;
-    index = (int)round(0.0588 * l - 0.296 * s - 15.8);
-    // index = cal_index(letters, words, sentences);
+    index = cal_index(letters, words, sentences);
 
     if (index < 1)
     {
@@ -56,15 +53,15 @@ int count_letters(string text)
 int count_words(string text)
 {
     int count = 1;
-    // char pre_letter = ' ';
+    char pre_letter = ' ';
 
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        if (isspace(text[i])) // && isspace(pre_letter))
+        if (isspace(text[i]) && isspace(pre_letter))
         {
             count++;
         }
-        // pre_letter = text[i];
+        pre_letter = text[i];
     }
 
     return count;
@@ -85,10 +82,10 @@ int count_sentences(string text)
     return count;
 }
 
-// int cal_index(int letters, int words, int sentences)
-// {
-//     double l = (double)letters / (double)words * 100.0;
-//     double s = (double)sentences/ (double)words * 100.0;
+int cal_index(int letters, int words, int sentences)
+{
+    double l = (double)letters / (double)words * 100.0;
+    double s = (double)sentences/ (double)words * 100.0;
 
-//     return (int)round(0.0588 * l - 0.296 * s - 15.8);
-// }
+    return (int)round(0.0588 * l - 0.296 * s - 15.8);
+}

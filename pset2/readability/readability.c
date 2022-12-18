@@ -52,16 +52,14 @@ int count_letters(string text)
 
 int count_words(string text)
 {
-    int count = 0;
-    char pre_letter = ' ';
+    int count = 1;
 
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        if (isalnum(text[i]) && isspace(pre_letter))
+        if (isspace(text[i]))
         {
             count++;
         }
-        pre_letter = text[i];
     }
 
     return count;

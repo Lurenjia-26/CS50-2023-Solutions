@@ -78,10 +78,7 @@ int count_sentences(string text)
             count++;
         }
     }
-    if (!count)
-    {
-        count++;
-    }
+
     return count;
 }
 

@@ -86,5 +86,5 @@ double cal_index(int letters, int words, int sentences)
     double l = letters / words * 100;
     double s = sentences/ words * 100 ;
 
-    return round(0.0588 * l - 0.296 * s - 15.8);
+    return (int)round(0.0588 * l - 0.296 * s - 15.8);
 }

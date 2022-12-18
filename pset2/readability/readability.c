@@ -55,8 +55,8 @@ int count_letters(string text)
 
 int count_words(string text)
 {
-    int count = 0;
-    char pre_letter = ' ';
+    int count = 1;
+    // char pre_letter = ' ';
 
     for (int i = 0, n = strlen(text); i < n; i++)
     {

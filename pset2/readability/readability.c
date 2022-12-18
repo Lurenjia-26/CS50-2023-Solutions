@@ -72,7 +72,7 @@ int count_sentences(string text)
 
     for (int i = 0; i < strlen(text); i++)
     {
-        if (ispunct(text[i]) && (text[i] == '.' || text[i] == '!' || text[i] == '?'))
+        if (text[i] == '.' || text[i] == '!' || text[i] == '?')
         {
             count++;
         }

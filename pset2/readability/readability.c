@@ -14,8 +14,11 @@ int main(void)
 
     letters = count_letters(text);
     words = count_words(text);
+    sentences = count_sentences(text);
+    
     printf("%d letters\n", letters);
     printf("%d words\n", words);
+    printf("%d sentences\n", sentences);
 }
 
 int count_letters(string text)
@@ -36,7 +39,7 @@ int count_words(string text)
 
     for (int i = 0; i < strlen(text); i++)
     {
-        if (isspace(text[i]) && isalnum(pre_letter))
+        if ((isspace(text[i]) || ispunct(text[i])) && isalnum(pre_letter))
             count++;
         pre_letter = text[i];
     }

@@ -39,7 +39,7 @@ int count_words(string text)
 
     for (int i = 0; i < strlen(text); i++)
     {
-        if ((isspace(text[i]) || (ispunct(text[i]) && (text[i] != '-' || text[i] != '\''))) && isalnum(pre_letter))
+        if ((isspace(text[i]) || ispunct(text[i])) && isalnum(pre_letter))
             count++;
         pre_letter = text[i];
     }

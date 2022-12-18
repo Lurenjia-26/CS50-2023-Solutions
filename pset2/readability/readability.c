@@ -19,8 +19,8 @@ int main(void)
     letters = count_letters(text);
     words = count_words(text);
     sentences = count_sentences(text);
-    l = (double)letters / (double)words * 100.0;
-    s = (double)sentences/ (double)words * 100.0;
+    l = letters * 100 / words;
+    s = sentences * 100 / words;
     index = (int)round(0.0588 * l - 0.296 * s - 15.8);
     // index = cal_index(letters, words, sentences);
 

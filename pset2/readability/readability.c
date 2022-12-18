@@ -7,12 +7,12 @@
 int count_letters(string text);
 int count_words(string text);
 int count_sentences(string text);
-double cal_index(int letters, int words, int sentences);
+int cal_index(int letters, int words, int sentences);
 
 int main(void)
 {
     int letters, words, sentences;
-    double index;
+    int index;
     string text = get_string("Text: ");
 
     letters = count_letters(text);
@@ -20,17 +20,17 @@ int main(void)
     sentences = count_sentences(text);
     index = cal_index(letters, words, sentences);
 
-    if (index < 1.0)
+    if (index < 1)
     {
         printf("Before Grade 1\n");
     }
-    else if (index >= 16.0)
+    else if (index >= 16)
     {
         printf("Grade 16+\n");
     }
     else
     {
-        printf("Grade %.0f\n", index);
+        printf("Grade %d\n", index);
     }
 }
 
@@ -81,10 +81,10 @@ int count_sentences(string text)
     return count;
 }
 
-double cal_index(int letters, int words, int sentences)
+int cal_index(int letters, int words, int sentences)
 {
     double l = letters / words * 100;
     double s = sentences/ words * 100 ;
 
-    return round(0.0588 * l - 0.296 * s - 15.8);
+    return (int)round(0.0588 * l - 0.296 * s - 15.8);
 }

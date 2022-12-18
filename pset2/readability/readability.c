@@ -68,19 +68,19 @@ int count_words(string text)
 
 int count_sentences(string text)
 {
-    int count = 1;
+    int count = 0;
 
     for (int i = 0; i < strlen(text); i++)
     {
         if (ispunct(text[i]) && (text[i] == '.' || text[i] == '!' || text[i] == '?'))
         {
-            if (i)
-            {
-                count++;
-            }
+            count++;
         }
     }
-
+    if (!count)
+    {
+        count++;
+    }
     return count;
 }
 

@@ -74,8 +74,10 @@ int count_sentences(string text)
     {
         if (ispunct(text[i]) && (text[i] == '.' || text[i] == '!' || text[i] == '?'))
         {
-            if (count == )
-            count++;
+            if (i)
+            {
+                count++;
+            }
         }
     }
 

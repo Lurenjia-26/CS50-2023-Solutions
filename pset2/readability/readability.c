@@ -83,8 +83,8 @@ int count_sentences(string text)
 
 double cal_index(int letters, int words, int sentences)
 {
-    double l = (double)letters * 100 / (double)words;
-    double s = (double)sentences * 100 / (double)words;
+    double l = letters / words * 100;
+    double s = sentences/ words * 100 ;
 
     return round(0.0588 * l - 0.296 * s - 15.8);
 }

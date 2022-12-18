@@ -10,15 +10,15 @@ int count_sentences(string text);
 int main(void)
 {
     int letters, words, sentences;
+    float result;
     string text = get_string("Text: ");
 
     letters = count_letters(text);
     words = count_words(text);
     sentences = count_sentences(text);
+    result = 
 
-    printf("%d letters\n", letters);
-    printf("%d words\n", words);
-    printf("%d sentences\n", sentences);
+    printf("Grade %.0f\n", result);
 }
 
 int count_letters(string text)

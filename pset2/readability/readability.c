@@ -20,7 +20,7 @@ int main(void)
     sentences = count_sentences(text);
     index = cal_index(letters, words, sentences);
 
-    printf("Grade %.2f\n", index);
+    printf("Grade %.0f\n", index);
 }
 
 int count_letters(string text)
@@ -66,8 +66,8 @@ int count_sentences(string text)
 
 float cal_index(int letters, int words, int sentences)
 {
-    float l = letters / words * 100;
-    float s = sentences / words * 100;
+    float l = (float)letters / (float)words * 100;
+    float s = (float)sentences / (float)words * 100;
 
-    return (0.0588 * l - 0.296 * s - 15.8);
+    return round(0.0588 * l - 0.296 * s - 15.8);
 }

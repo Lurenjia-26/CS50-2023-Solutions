@@ -6,19 +6,21 @@
 int count_letters(string text);
 int count_words(string text);
 int count_sentences(string text);
+float cal_index(float l, float s);
 
 int main(void)
 {
     int letters, words, sentences;
-    float result;
+    float l, s, index;
     string text = get_string("Text: ");
 
     letters = count_letters(text);
     words = count_words(text);
     sentences = count_sentences(text);
-    result = 
+    l = 
+    index = cal_index(l, s);
 
-    printf("Grade %.0f\n", result);
+    printf("Grade %.0f\n", index);
 }
 
 int count_letters(string text)
@@ -55,4 +57,9 @@ int count_sentences(string text)
             count++;
     }
     return count;
+}
+
+float cal_index(float l, float s)
+{
+    return (0.0588 * l - 0.296 * s - 15.8)
 }

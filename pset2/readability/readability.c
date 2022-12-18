@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <ctype.h>
+#include <string.h>
 
 int count_letters(string text);
 int count_words(string text);
@@ -17,7 +18,8 @@ int count_letters(string text)
     int count = 0;
     for (int i = 0; i < strlen(text); i++)
     {
-        if()
+        if(isletter(text[i]))
+            count++;
     }
 }
 

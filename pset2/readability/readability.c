@@ -20,7 +20,6 @@ int main(void)
     sentences = count_sentences(text);
     index = cal_index(letters, words, sentences);
 
-    printf("%d sentences\n", sentences);
     if (index < 1.0)
     {
         printf("Before Grade 1\n");
@@ -69,7 +68,7 @@ int count_words(string text)
 
 int count_sentences(string text)
 {
-    int count = 0;
+    int count = 1;
 
     for (int i = 0; i < strlen(text); i++)
     {

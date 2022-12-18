@@ -85,7 +85,7 @@ int count_sentences(string text)
 int cal_index(int letters, int words, int sentences)
 {
     double l = (double)letters / (double)words * 100.0;
-    double s = (double)sentences/ (double)words * 100.0;
+    double s = (double)sentences / (double)words * 100.0;
 
     return (int)round(0.0588 * l - 0.296 * s - 15.8);
 }

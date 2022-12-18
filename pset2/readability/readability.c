@@ -13,12 +13,16 @@ int main(void)
 {
     int letters, words, sentences;
     int index;
+    double l, s;
     string text = get_string("Text: ");
 
     letters = count_letters(text);
     words = count_words(text);
     sentences = count_sentences(text);
-    index = cal_index(letters, words, sentences);
+    l = (double)letters / (double)words * 100.0;
+    s = (double)sentences/ (double)words * 100.0;
+    index = (int)round(0.0588 * l - 0.296 * s - 15.8);
+    // index = cal_index(letters, words, sentences);
 
     if (index < 1)
     {
@@ -81,10 +85,10 @@ int count_sentences(string text)
     return count;
 }
 
-int cal_index(int letters, int words, int sentences)
-{
-    double l = (double)letters / (double)words * 100.0;
-    double s = (double)sentences/ (double)words * 100.0;
+// int cal_index(int letters, int words, int sentences)
+// {
+//     double l = (double)letters / (double)words * 100.0;
+//     double s = (double)sentences/ (double)words * 100.0;
 
-    return (int)round(0.0588 * l - 0.296 * s - 15.8);
-}
+//     return (int)round(0.0588 * l - 0.296 * s - 15.8);
+// }

@@ -7,12 +7,12 @@
 int count_letters(string text);
 int count_words(string text);
 int count_sentences(string text);
-float cal_index(int letters, int words, int sentences);
+double cal_index(int letters, int words, int sentences);
 
 int main(void)
 {
     int letters, words, sentences;
-    float index;
+    double index;
     string text = get_string("Text: ");
 
     letters = count_letters(text);
@@ -81,10 +81,10 @@ int count_sentences(string text)
     return count;
 }
 
-float cal_index(int letters, int words, int sentences)
+double cal_index(int letters, int words, int sentences)
 {
-    float l = (float)letters / (float)words * 100;
-    float s = (float)sentences / (float)words * 100;
+    double l = (double)letters / (double)words * 100;
+    double s = (double)sentences / (double)words * 100;
 
     return round(0.0588 * l - 0.296 * s - 15.8);
 }

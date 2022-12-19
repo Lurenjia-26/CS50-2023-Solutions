@@ -22,7 +22,10 @@ int main(int argc, string argv[])
     {
         char ch = key[i];
         check[tolower(key[i]) - 'a']++;
-        if (check[])
+        if (check[tolower(key[i]) - 'a'] != 1)
+        {
+            return 1;
+        }
     }
 
     string s = get_string("plaintext:  ");

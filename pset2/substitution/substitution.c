@@ -6,6 +6,7 @@
 int main(int argc, string argv[])
 {
     string key = argv[1];
+    int check[26] = { 0 };
 
     if (argc != 2)
     {
@@ -16,6 +17,12 @@ int main(int argc, string argv[])
     {
         printf("Key must contain 26 characters.\n");
         return 1;
+    }
+    for (int i = 0, n = strlen(key); i < n; i++)
+    {
+        char ch = key[i];
+        check[tolower(key[i]) - 'a']++;
+        if (check[])
     }
 
     string s = get_string("plaintext:  ");

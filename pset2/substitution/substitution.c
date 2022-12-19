@@ -5,7 +5,7 @@
 
 int main(int argc, string argv[])
 {
-    string key = "QWERTYUIOPASDFGHJKLZXCVBNM";
+    string key = argv[1];
 
     if (argc != 2)
     {

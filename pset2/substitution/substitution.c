@@ -17,16 +17,16 @@ int main(int argc, string argv[])
         printf("Key must contain 26 characters.\n");
         return 1;
     }
-    
+
     string s = get_string("plaintext:  ");
 
     for (int i = 0, n = strlen(s); i < n; i++)
     {
         if (isalpha(s[i]))
         {
-            if (isupper(s[i]))
+            if (islower(s[i]))
             {
-                s[i] = key[s[i] - 'a'];
+                s[i] = tolower(key[s[i] - 'a']);
             }
             else
             {
@@ -40,4 +40,5 @@ int main(int argc, string argv[])
     {
         printf("%c", s[i]);
     }
+    printf("\n");
 }

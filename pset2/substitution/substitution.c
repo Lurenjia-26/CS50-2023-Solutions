@@ -6,9 +6,13 @@
 int main(int argc, string argv[])
 {
     string key = "QWERTYUIOPASDFGHJKLZXCVBNM";
+    if (argc != 2)
+    {
+        printf("Usage: ./substitution key\n");
+    }
     if (strlen(key) != 26)
     {
-        
+        printf("Key must contain 26 characters.\n");
     }
     string s = get_string("plaintext:  ");
 

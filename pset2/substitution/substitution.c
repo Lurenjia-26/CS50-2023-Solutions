@@ -26,11 +26,11 @@ int main(int argc, string argv[])
         {
             if (islower(s[i]))
             {
-                s[i] = tolower(key[s[i] - 'a']);
+                s[i] = tolower(key[tolower(s[i]) - 'a']);
             }
             else
             {
-                s[i] = key[s[i] - 'A'];
+                s[i] = toupper(key[toupper(s[i]) - 'A']);
             }
         }
     }

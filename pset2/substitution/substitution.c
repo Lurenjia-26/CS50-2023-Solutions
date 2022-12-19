@@ -35,10 +35,5 @@ int main(int argc, string argv[])
         }
     }
 
-    printf("ciphertext: ");
-    for (int i = 0, n = strlen(s); i < n; i++)
-    {
-        printf("%c", s[i]);
-    }
-    printf("\n");
+    printf("ciphertext: %s\n", s);
 }

@@ -83,7 +83,8 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
-    int winner, max_votes = 0;
+    int winner[candidate_count] = 0;
+    int max_votes = 0;
 
     for (int i = 0; i < candidate_count; i++)
     {

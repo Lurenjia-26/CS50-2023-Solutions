@@ -83,7 +83,6 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
-    int winner[MAX] = {0};
     int max_votes = 0;
 
     for (int i = 0; i < candidate_count; i++)
@@ -95,7 +94,7 @@ void print_winner(void)
     }
     for (int i = 0; i < candidate_count; i++)
     {
-        if (winner[i] == 1)
+        if (candidates[i].votes == max_votes)
         {
             printf("%s\n", candidates[i].name);
         }

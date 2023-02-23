@@ -176,7 +176,7 @@ void sort_pairs(void)
 
 bool cycle(int winner, int loser)
 {
-    
+    while (winner != -1 && )
 
     if (winner == loser)
     {

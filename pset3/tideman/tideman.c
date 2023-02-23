@@ -166,7 +166,7 @@ void sort_pairs(void)
                 strongest = j;
             }
         }
-        int temp = pairs[i];
+        pair temp = pairs[i];
         pairs[i] = pairs[strongest];
         pairs[strongest] = temp;
     }

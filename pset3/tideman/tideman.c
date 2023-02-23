@@ -179,11 +179,10 @@ void lock_pairs(void)
     // TODO
     for (int i = 0; i < pair_count; i++)
     {
-        if (/*cycled*/)
+        if (/*not cycled*/)
         {
-            continue;
+            locked[pairs[i].winner][pairs[i].loser] = true;
         }
-        locked[pairs[i].winner][pairs[i].loser] = true;
     }
     return;
 }

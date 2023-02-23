@@ -174,10 +174,25 @@ void sort_pairs(void)
     return;
 }
 
+// Check whether the edge will create a cycle
 bool cycle(int winner, int loser)
 {
-    while (winner != -1 && )
-
+    while (winner != loser)
+    {
+        bool source = false;
+        for (int i = 0; i < pair_count; i++)
+        {
+            if (locked[i][winner])
+            {
+                source = true;
+                i = winner;
+            }
+        }
+        if (!source)
+        {
+            break;
+        }
+    }
     if (winner == loser)
     {
         return true;
@@ -203,5 +218,13 @@ void lock_pairs(void)
 void print_winner(void)
 {
     // TODO
+    int winner = 0;
+    for (int i = 0; i < pair_count; i++)
+    {
+        if (locked[i][winner])
+        {
+            winner = i;
+        }
+    }
     return;
 }

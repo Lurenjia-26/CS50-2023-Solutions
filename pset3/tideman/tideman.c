@@ -85,11 +85,6 @@ int main(int argc, string argv[])
             }
         }
 
-        for (int j = 0; j < candidate_count; j++)
-        {
-            printf("preferences[%i][%i] = %i", i, j, preferences[i][j]);
-        }
-
         record_preferences(ranks);
 
         printf("\n");

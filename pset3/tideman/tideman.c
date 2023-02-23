@@ -221,6 +221,7 @@ void print_winner(void)
     int winner = 0;
     for (int i = 0; i < pair_count; i++)
     {
+        for
         if (locked[i][winner])
         {
             winner = i;

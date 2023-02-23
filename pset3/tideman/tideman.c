@@ -176,7 +176,12 @@ void sort_pairs(void)
 
 bool cycle(int winner, int loser)
 {
+    
 
+    if (winner == loser)
+    {
+        return true;
+    }
     return false;
 }
 
@@ -186,7 +191,7 @@ void lock_pairs(void)
     // TODO
     for (int i = 0; i < pair_count; i++)
     {
-        if (/*not cycled*/)
+        if (!cycle(pairs[i].winner, pairs[i].loser))
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
         }

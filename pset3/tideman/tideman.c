@@ -180,7 +180,7 @@ bool cycle(int winner, int loser)
     while (winner != loser)
     {
         bool source = false;
-        for (int i = 0; i < candidate_count; i++)
+        for (int i = 0; i < pair_count; i++)
         {
             if (locked[i][winner])
             {

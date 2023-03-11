@@ -109,9 +109,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
             for (int row = -1; row < 1; row++)
             {
-                for (int col = -1; col < 1; col++)
+                for (int col = -1; col < 1; col++, k++)
                 {
-                    k++;
                     if (i + row < 0 || i + row > height - 1)
                     {
                         continue;

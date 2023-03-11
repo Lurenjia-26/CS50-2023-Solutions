@@ -50,15 +50,21 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
+            int k = 0;
+            int sum_red, sum_green, sum_blue;
             for (int row = -1; row < 1; row++)
             {
                 for (int col = -1; col < 1; col++)
                 {
-                    if (j + col < 0 || j + col > height - 1)
+                    if (i + row < 0 || i + row > height - 1)
                     {
                         continue;
                     }
-                    temp[i][j] =
+                    if (j + col < 0 || j + col > width - 1)
+                    {
+                        continue;
+                    }
+
                 }
             }
         }

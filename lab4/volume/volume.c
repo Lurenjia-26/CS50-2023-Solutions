@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 
     // TODO: Read samples from input file and write updated data to output file
     uint16_t sample;
-    for (int i = 0; i < )
+    while (fread(sample))
     fread()
 
     // Close files

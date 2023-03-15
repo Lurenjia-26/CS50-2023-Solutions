@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#define BLOCK_SIZE 512
 
 int main(int argc, char *argv[])
 {
@@ -16,10 +17,10 @@ int main(int argc, char *argv[])
         return 2;
     }
 
-    uint8_t buffer[4];
-    while (fread(buffer, 1, BLOCK_SIZE, raw_file))
+    uint8_t buffer[BLOCK_SIZE];
+    while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
     {
-
+        if ()
     }
 
     return 0;

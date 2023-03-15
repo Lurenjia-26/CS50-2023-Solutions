@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define BLOCK_SIZE 512
+#define BLOCK_SIZE 512;
 
 bool isJPEG(uint8_t *buffer);
 

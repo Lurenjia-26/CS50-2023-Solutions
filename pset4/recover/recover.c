@@ -8,5 +8,8 @@ int main(int argc, char *argv[])
         printf("Usage: ./recover infile.\n");
         return 1;
     }
-    
+
+    FILE *input = fopen(argv[1], 'r');
+
+    return 0;
 }

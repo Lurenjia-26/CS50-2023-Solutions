@@ -20,13 +20,16 @@ int main(int argc, char *argv[])
     }
 
     uint8_t buffer[BLOCK_SIZE];
+    char filename[7];
+    int i = 1;
     while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
     {
         if (isJPEG(buffer) != true)
         {
             continue;
         }
-        
+        sprintf(filename, "03i.jpg", i);
+        i++;
     }
 
     return 0;

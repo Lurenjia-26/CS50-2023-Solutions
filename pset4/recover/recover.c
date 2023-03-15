@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
     int i = 0;
     while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
     {
-        if (isJPEG(buffer) != true)
+        if (isJPEG(buffer))
         {
             continue;
         }

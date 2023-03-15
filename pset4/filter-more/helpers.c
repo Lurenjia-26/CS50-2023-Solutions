@@ -134,7 +134,18 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     blue_y += Gy[k] * image[i + row][j + col].rgbtBlue;
                 }
             }
-            temp[i][j].rgbtRed = sqrt((red_x * red_x) + (red_y * red_y));
+            if (sqrt((red_x * red_x) + (red_y * red_y)) > 255)
+            {
+                temp[i][j].rgbtRed = 255;
+            }
+            else
+            {
+                temp[i][j].rgbtRed = sqrt((red_x * red_x) + (red_y * red_y));
+            }
+            if (sqrt((green_x * green_x) + (green_y * green_y)) > 255)
+            {
+                
+            }
             temp[i][j].rgbtGreen = sqrt((green_x * green_x) + (green_y * green_y));
             temp[i][j].rgbtBlue = sqrt((blue_x * blue_x) + (blue_y * blue_y));
         }

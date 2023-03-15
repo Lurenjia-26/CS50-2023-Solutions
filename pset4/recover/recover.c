@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
     uint8_t buffer[BLOCK_SIZE];
     char filename[8];
     int i = 1;
-    while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
+    while (fread(buffer, BLOCK_SIZE, 1, raw_file) == BLOCK_SIZE)
     {
         if (isJPEG(buffer) != true)
         {
@@ -35,9 +35,12 @@ int main(int argc, char *argv[])
         }
         sprintf(filename, "03i.jpg", i);
         output = fopen(filenname, "w");
-        fwrite(buffer, 1, BLOCK_SIZE, output);
+        fwrite(buffer, BLOCK_SIZE, 1, output);
         i++;
     }
+
+    fclose(input);
+    fclose(output);
 
     return 0;
 }

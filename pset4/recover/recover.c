@@ -29,6 +29,10 @@ int main(int argc, char *argv[])
         {
             continue;
         }
+        if (output != NULL)
+        {
+            fclose(output);
+        }
         sprintf(filename, "03i.jpg", i);
         output = fopen(filenname, "w");
         i++;

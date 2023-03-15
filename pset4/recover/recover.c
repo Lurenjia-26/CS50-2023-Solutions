@@ -16,7 +16,11 @@ int main(int argc, char *argv[])
         return 2;
     }
 
-    FILE *buffer;
+    uint8_t buffer[4];
+    while (fread(buffer, 1, BLOCK_SIZE, raw_file))
+    {
+
+    }
 
     return 0;
 }

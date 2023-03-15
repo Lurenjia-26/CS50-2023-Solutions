@@ -19,8 +19,9 @@ int main(int argc, char *argv[])
         return 2;
     }
 
+    FILE *output = NULL;
     uint8_t buffer[BLOCK_SIZE];
-    char filename[7];
+    char filename[8];
     int i = 1;
     while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
     {
@@ -29,6 +30,7 @@ int main(int argc, char *argv[])
             continue;
         }
         sprintf(filename, "03i.jpg", i);
+        output = fopen(filenname, "w");
         i++;
     }
 

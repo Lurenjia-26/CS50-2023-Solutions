@@ -2,12 +2,15 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <stdint.h>
+
+// Size of 1 block
 #define BLOCK_SIZE 512
 
 bool isJPEG(uint8_t *buffer);
 
 int main(int argc, char *argv[])
 {
+    // Check command-line arguments
     if (argc != 2)
     {
         printf("Usage: ./recover infile.\n");
@@ -25,6 +28,7 @@ int main(int argc, char *argv[])
     uint8_t buffer[BLOCK_SIZE];
     char filename[8];
     int i = 0;
+
     while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
     {
         if (isJPEG(buffer))

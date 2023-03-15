@@ -126,7 +126,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     {
                         continue;
                     }
-                    
+                    red_x = Gx[]
                 }
             }
         }

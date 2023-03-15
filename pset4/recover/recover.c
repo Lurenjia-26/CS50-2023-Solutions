@@ -29,16 +29,16 @@ int main(int argc, char *argv[])
     {
         if (isJPEG(buffer))
         {
-            continue;
+            if (output != NULL)
+            {
+                fclose(output);
+            }
+            sprintf(filename, "%03i.jpg", i);
+            output = fopen(filename, "w");
+            fwrite(buffer, 1, BLOCK_SIZE, output);
+            i++;
         }
-        if (output != NULL)
-        {
-            fclose(output);
-        }
-        sprintf(filename, "%03i.jpg", i);
-        output = fopen(filename, "w");
-        fwrite(buffer, 1, BLOCK_SIZE, output);
-        i++;
+
     }
 
     fclose(raw_file);

@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
         i++;
     }
 
-    fclose(input);
+    fclose(raw_file);
     fclose(output);
 
     return 0;

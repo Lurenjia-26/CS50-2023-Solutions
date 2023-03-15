@@ -126,9 +126,17 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     {
                         continue;
                     }
-                    red_x = Gx[k] = 
+                    red_x += Gx[k] * image[i + row][j + col].rgbtRed;
+                    red_y += Gy[k] * image[i + row][j + col].rgbtRed;
+                    green_x += Gx[k] * image[i + row][j + col].rgbtGreen;
+                    green_y += Gy[k] * image[i + row][j + col].rgbtGreen;
+                    blue_x += Gx[k] * image[i + row][j + col].rgbtBlue;
+                    blue_y += Gy[k] * image[i + row][j + col].rgbtBlue;
                 }
             }
+            temp[i][j].rgbtRed = sqrt((red_x * red_x) + (red_y * red_y));
+            temp[i][j].rgbtGreen = sqrt((green_x * green_x) + (green_y * green_y));
+            temp[i][j].rgbtBlue = sqrt((blue_x * blue_x) + (blue_y * blue_y));
         }
     }
     for (int i = 0; i < height; i++)

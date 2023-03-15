@@ -45,9 +45,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             double k = 0.0;
             double sum_red = 0, sum_green = 0, sum_blue = 0;
 
-            for (int row = -1; row < 1; row++)
+            for (int row = -1; row < 2; row++)
             {
-                for (int col = -1; col < 1; col++)
+                for (int col = -1; col < 2; col++)
                 {
                     if (i + row < 0 || i + row > height - 1)
                     {
@@ -106,9 +106,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             double green_x = 0.0, green_y = 0.0;
             double blue_x = 0.0, blue_y = 0.0;
 
-            for (int row = -1; row < 1; row++)
+            for (int row = -1; row < 2; row++)
             {
-                for (int col = -1; col < 1; col++, k++)
+                for (int col = -1; col < 2; col++, k++)
                 {
                     if (i + row < 0 || i + row > height - 1)
                     {

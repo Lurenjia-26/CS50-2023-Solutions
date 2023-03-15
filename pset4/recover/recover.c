@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <stdint.h>
-#define BLOCK_SIZE 512;
+#define BLOCK_SIZE 512
 
 bool isJPEG(uint8_t *buffer);
 

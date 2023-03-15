@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // Open file
+    // Open files
     FILE *raw_file = fopen(argv[1], "r");
     if (raw_file == NULL)
     {
@@ -30,6 +30,7 @@ int main(int argc, char *argv[])
     char filename[8];
     int i = 0;
 
+    // Read blocks from raw file
     while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
     {
         if (isJPEG(buffer))
@@ -48,6 +49,7 @@ int main(int argc, char *argv[])
         }
     }
 
+    // Close files
     fclose(raw_file);
     fclose(output);
 

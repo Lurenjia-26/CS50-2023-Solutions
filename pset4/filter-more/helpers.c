@@ -109,10 +109,10 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            double k = 0;
-            int red_x = 0, red_y = 0;
-            int green_x = 0, green_y = 0;
-            int blue_x = 0, blue_y = 0;
+            int k = 0;
+            double red_x = 0.0, red_y = 0.0;
+            double green_x = 0.0, green_y = 0.0;
+            double blue_x = 0., blue_y = 0.0;
 
             for (int row = -1; row < 1; row++)
             {
@@ -134,20 +134,30 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     blue_y += Gy[k] * image[i + row][j + col].rgbtBlue;
                 }
             }
-            if (sqrt((red_x * red_x) + (red_y * red_y)) > 255)
+            if (round(sqrt((red_x * red_x) + (red_y * red_y))) > 255)
             {
                 temp[i][j].rgbtRed = 255;
             }
             else
             {
-                temp[i][j].rgbtRed = sqrt((red_x * red_x) + (red_y * red_y));
+                temp[i][j].rgbtRed = round(sqrt((red_x * red_x) + (red_y * red_y)));
             }
-            if (sqrt((green_x * green_x) + (green_y * green_y)) > 255)
+            if (round(sqrt((green_x * green_x) + (green_y * green_y))) > 255)
             {
-                
+                temp[i][j].rgbtGreen = 255;
             }
-            temp[i][j].rgbtGreen = sqrt((green_x * green_x) + (green_y * green_y));
-            temp[i][j].rgbtBlue = sqrt((blue_x * blue_x) + (blue_y * blue_y));
+            else
+            {
+                temp[i][j].rgbtGreen = round(sqrt((green_x * green_x) + (green_y * green_y)))
+            }
+            if (round(sqrt((blue_x * blue_x) + (blue_y * blue_y))) > 255)
+            {
+                temp[i][j].rgbtBlue = 255;
+            }
+            else
+            {
+                temp[i][j].rgbtBlue = round(sqrt((blue_x * blue_x) + (blue_y * blue_y)));
+            }
         }
     }
     for (int i = 0; i < height; i++)

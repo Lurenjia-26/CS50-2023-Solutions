@@ -17,6 +17,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+    // Open file
     FILE *raw_file = fopen(argv[1], "r");
     if (raw_file == NULL)
     {

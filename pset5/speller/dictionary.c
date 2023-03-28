@@ -34,7 +34,7 @@ bool check(const char *word)
     // TODO
     unsigned int hash_value = hash(word);
     node *cursor = table[hash_value];
-    while (cursor->next != NULL)
+    while (cursor != NULL)
     {
         if (strcasecmp(word, cursor->word) == 0)
         {

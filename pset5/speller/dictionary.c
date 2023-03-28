@@ -40,11 +40,11 @@ bool load(const char *dictionary)
     // TODO
     FILE *dict_l = fopen(./dictionaries/large, "r");
     FILE *dict_s = fopen(./dictionaries/small, "r");
-    if (dict_l == NULL)
+    if (dict_l == NULL || dict_s == NULL)
     {
         return false;
     }
-
+    node *root = 
 
 
     fclose(dict);

@@ -44,15 +44,18 @@ bool load(const char *dictionary)
     {
         return false;
     }
-    node *cur_s = malloc(sizeof(node));
-    node *cur_l = malloc(sizeof(node));
+    root_s = malloc(sizeof(node));
+    root_l = malloc(sizeof(node));
+    node *cur_s = root_s;
+    node *cur_l = root_l;
 
     char ch;
     while ((ch = fgetc(dict_s)) != EOF)
     {
         if (ch == '\n')
         {
-
+            cur_s->end_word = true;
+            cur_s = root_s;
         }
     }
 

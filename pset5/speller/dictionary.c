@@ -90,8 +90,20 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    return false;
+    for (int i = 0; i < LENGTH; i++)
+    {
+        free_node(table[i]);
+    }
+    return true;
 }
 
 // Free each node
-void free_node(node *table)
+void free_node(node *cursor)
+{
+    if (cursor == NULL)
+    {
+        return;
+    }
+    free_node(cursor->next);
+    free(cursor);
+}

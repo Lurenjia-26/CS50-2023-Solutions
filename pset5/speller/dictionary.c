@@ -47,6 +47,12 @@ bool load(const char *dictionary)
     node *root_l = malloc(sizeof(node));
     node *root_s = malloc(sizeof(node));
 
+    char ch;
+    while ((ch = fgetc(dict_s)) != EOF)
+    {
+        
+    }
+
     fclose(dict);
     return false;
 }

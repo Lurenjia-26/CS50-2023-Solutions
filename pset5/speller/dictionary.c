@@ -8,8 +8,8 @@
 // Represents a node in a hash table
 typedef struct node
 {
-    char word[LENGTH + 1];
-    struct node *next;
+    bool end_word;
+    struct node *next[26];
 }
 node;
 

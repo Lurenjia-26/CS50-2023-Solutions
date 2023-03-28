@@ -14,8 +14,8 @@ typedef struct node
 }
 node;
 
-// TODO: Choose number of buckets in hash table
-const unsigned int N = 26;
+//Roots of Tries
+node *root_s, *root_l;
 
 // Hash table
 node *table[N];
@@ -38,19 +38,22 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
-    FILE *dict_l = fopen(./dictionaries/large, "r");
-    FILE *dict_s = fopen(./dictionaries/small, "r");
+    FILE *dict_s = fopen(./dictionaries/large, "r");
+    FILE *dict_l = fopen(./dictionaries/small, "r");
     if (dict_l == NULL || dict_s == NULL)
     {
         return false;
     }
-    node *root_l = malloc(sizeof(node));
-    node *root_s = malloc(sizeof(node));
+    node *cur_s = malloc(sizeof(node));
+    node *cur_l = malloc(sizeof(node));
 
     char ch;
     while ((ch = fgetc(dict_s)) != EOF)
     {
-        
+        if (ch == '\n')
+        {
+
+        }
     }
 
     fclose(dict);

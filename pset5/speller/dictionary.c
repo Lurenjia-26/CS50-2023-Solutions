@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 #include "dictionary.h"
 
@@ -10,15 +11,15 @@
 typedef struct node
 {
     bool end_word;
-    struct node *next[26];
+    struct node *next[27];
 }
 node;
 
 //Roots of Tries
 node *root_s, *root_l;
 
-// Hash table
-node *table[N];
+//Size of Trie
+unsigned dict_size = 0;
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
@@ -28,18 +29,22 @@ bool check(const char *word)
 }
 
 // Hashes word to a number
-unsigned int hash(const char *word)
+unsigned int hash(char word)
 {
     // TODO: Improve this hash function
-    return toupper(word[0]) - 'A';
+    if (word == '\'')
+    {
+
+    }
+    return 26;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
     // TODO
-    FILE *dict_s = fopen(./dictionaries/large, "r");
-    FILE *dict_l = fopen(./dictionaries/small, "r");
+    FILE *dict_s = fopen("dictionaries/large", "r");
+    FILE *dict_l = fopen("dictionaries/small", "r");
     if (dict_l == NULL || dict_s == NULL)
     {
         return false;
@@ -56,10 +61,21 @@ bool load(const char *dictionary)
         {
             cur_s->end_word = true;
             cur_s = root_s;
+            dict_size++;
+        }
+        else
+        {
+            unsigned i = hash(ch);
+            if (cur_s->next[i] == NULL)
+            {
+                cur_s->next[i] = malloc(sizeof(node));
+            }
+            cur_s = cur_s->next[i];
         }
     }
 
-    fclose(dict);
+    fclose(dict_s);
+    fclose(dict_l);
     return false;
 }
 

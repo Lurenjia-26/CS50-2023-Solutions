@@ -23,7 +23,7 @@ const unsigned int N = 26;
 // Hash table
 node *table[N];
 
-//
+// Number of nodes of hash table
 unsigned int table_size = 0;
 
 // Returns true if word is in dictionary, else false
@@ -92,3 +92,6 @@ bool unload(void)
     // TODO
     return false;
 }
+
+// Free each node
+void free_node(node *table)

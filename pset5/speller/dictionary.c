@@ -46,7 +46,6 @@ bool load(const char *dictionary)
     }
     node *root_l = malloc(sizeof(node));
     node *root_s = malloc(sizeof(node));
-    if()
 
     fclose(dict);
     return false;

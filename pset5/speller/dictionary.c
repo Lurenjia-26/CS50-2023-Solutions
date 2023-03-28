@@ -2,6 +2,7 @@
 
 #include <ctype.h>
 #include <stdbool.h>
+#include <strings.h>
 
 #include "dictionary.h"
 
@@ -23,10 +24,14 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
-    node word;
-    while (word->next != NULL)
+    node cursor;
+    while (cursor->next != NULL)
     {
-        word = word->next;
+        if (strcasecmp(word, cursor->word) == 0)
+        (
+            return true;
+        )
+        cursor = cursor->next;
     }
     return false;
 }

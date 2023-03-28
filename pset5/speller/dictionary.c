@@ -38,9 +38,9 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
-    FILE *dict_l = fopen("./dictiionaries/large", "r");
-    FILE *dict_s = fopen()
-    if (dict == NULL)
+    FILE *dict_l = fopen(./dictionaries/large, "r");
+    FILE *dict_s = fopen(./dictionaries/small, "r");
+    if (dict_l == NULL)
     {
         return false;
     }

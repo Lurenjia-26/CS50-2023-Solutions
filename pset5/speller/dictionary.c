@@ -55,7 +55,8 @@ bool load(const char *dictionary)
         return false;
     }
 
-    while (fscanf())
+    char word[LENGTH + 1];
+    while ((word = fscanf()))
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded

@@ -23,6 +23,10 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
+    for (int i = 0; i < N; i++)
+    {
+        
+    }
     return false;
 }
 

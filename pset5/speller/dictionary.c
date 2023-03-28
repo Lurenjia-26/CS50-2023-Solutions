@@ -3,6 +3,8 @@
 #include <ctype.h>
 #include <stdio.h>
 #include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
 #include <strings.h>
 
 #include "dictionary.h"
@@ -26,13 +28,13 @@ bool check(const char *word)
 {
     // TODO
     unsigned int hash_value = hash(word);
-    node cursor = table[hash_value];
+    node *cursor = table[hash_value];
     while (cursor->next != NULL)
     {
         if (strcasecmp(word, cursor->word) == 0)
-        (
+        {
             return true;
-        )
+        }
         cursor = cursor->next;
     }
     return false;
@@ -56,7 +58,7 @@ bool load(const char *dictionary)
     }
 
     char word[LENGTH + 1];
-    while (fscanf(dict, %s, word) != EOF)
+    while (fscanf(dict, "%s", word) != EOF)
     {
         node *n = malloc(sizeof(node));
         if (n == NULL)
@@ -68,6 +70,9 @@ bool load(const char *dictionary)
         n->next = table[hash_value];
         table[hash_value] = n;
     }
+
+    fclose(dict);
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded

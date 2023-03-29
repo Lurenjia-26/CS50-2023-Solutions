@@ -56,7 +56,7 @@ unsigned int hash(const char *word)
         hash_value += tolower(word[i - 1]) - 'a';
     }
 
-    return (hash_value / i) % N;
+    return (hash_value / i);
 }
 
 // Loads dictionary into memory, returning true if successful, else false

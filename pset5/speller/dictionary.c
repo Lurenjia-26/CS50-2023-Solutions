@@ -54,7 +54,8 @@ unsigned int hash(const char *word)
 
     for (int i = 0; i < len; i++)
     {
-        hash_value += toupper(word[0]) - 'A';
+        if
+        hash_value += toupper(word[i]) - 'A';
     }
     printf("Hash value is %d of %s!\n", hash_value, word);
 

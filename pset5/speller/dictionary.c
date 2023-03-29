@@ -59,7 +59,7 @@ unsigned int hash(const char *word)
     {
         hash_value = (tolower(word[0]) - 'a') * 2;
     }
-    printf("%d is hash_value!!!\n", hash_value);
+    printf("%d is hash_value of %s!!!\n", hash_value, word);
 
     return hash_value % N;
 }

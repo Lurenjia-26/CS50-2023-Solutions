@@ -50,17 +50,14 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     unsigned int hash_value = 0;
+    int len = strlen(word);
 
-    if (strlen(word) > 1)
+    for (int i = 0; i < len; i++)
     {
-        hash_value = (tolower(word[0]) - 'a') + (tolower(word[1]) - 'a');
-    }
-    else
-    {
-        hash_value = (tolower(word[0]) - 'a') * 2;
+        hash_value += toupper(word[0]) - 'A';
     }
 
-    return hash_value % N;
+    return hash_value / len;
 }
 
 // Loads dictionary into memory, returning true if successful, else false

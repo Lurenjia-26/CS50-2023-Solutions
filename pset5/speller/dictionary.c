@@ -50,13 +50,14 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     unsigned int hash_value = 0, i;
+    int len = strlen(word);
 
-    for (i = 1; word[i] != '\0'; i++)
+    for (i = 1; i < len; i++)
     {
-        hash_value += tolower(word[i - 1]) - 'a';
+        hash_value += tolower(word[i]) - 'a';
     }
 
-    return (hash_value / i);
+    return hash_value % N;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
@@ -99,7 +100,7 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    for (int i = 0; i < LENGTH; i++)
+    for (int i = 0; i < N; i++)
     {
         free_node(table[i]);
     }

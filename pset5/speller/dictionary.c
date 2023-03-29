@@ -53,7 +53,7 @@ unsigned int hash(const char *word)
 
     if (strlen(word) > 1)
     {
-        hash_value = (tolower(word[0]) - 'a') * 26 + (tolower(word[1]) - 'a');
+        hash_value = (tolower(word[0]) - 'a') * (tolower(word[1]) - 'a');
     }
     else
     {

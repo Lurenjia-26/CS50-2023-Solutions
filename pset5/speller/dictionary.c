@@ -52,9 +52,9 @@ unsigned int hash(const char *word)
     unsigned int hash_value = 0, i;
     int len = strlen(word);
 
-    for (i = 1; i < len; i++)
+    for (i = 0; i < len; i++)
     {
-        hash_value += tolower(word[i]) - 'a';
+        hash_value += tolower(word[i]);
     }
 
     return hash_value % N;

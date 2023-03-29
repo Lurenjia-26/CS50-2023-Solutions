@@ -20,7 +20,7 @@ node;
 void free_node(node *cursor);
 
 // TODO: Choose number of buckets in hash table
-const unsigned int N = 400;
+const unsigned int N = 700;
 
 // Hash table
 node *table[N];

@@ -54,10 +54,10 @@ unsigned int hash(const char *word)
 
     for (i = 0; i < len; i++)
     {
-        hash_value += tolower(word[i]);
+        hash_value += tolower(word[i]) - 'a';
     }
 
-    return hash_value % N;
+    return hash_value / i;
 }
 
 // Loads dictionary into memory, returning true if successful, else false

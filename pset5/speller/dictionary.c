@@ -20,7 +20,7 @@ node;
 void free_node(node *cursor);
 
 // TODO: Choose number of buckets in hash table
-const unsigned int N = 45;
+const unsigned int N = 2600;
 
 // Hash table
 node *table[N];
@@ -57,7 +57,7 @@ unsigned int hash(const char *word)
         hash_value += toupper(word[0]) - 'A';
     }
 
-    return hash_value / len;
+    return hash_value;
 }
 
 // Loads dictionary into memory, returning true if successful, else false

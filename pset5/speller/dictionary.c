@@ -49,8 +49,10 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
+    unsigned int hash_value = 0;
+    
 
-    return strlen(word);
+    return hash_value;
 }
 
 // Loads dictionary into memory, returning true if successful, else false

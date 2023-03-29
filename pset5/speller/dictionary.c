@@ -49,18 +49,19 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    unsigned int hash_value = 0;
-    int len = strlen(word);
+    // unsigned int hash_value = 0;
+    // int len = strlen(word);
 
-    for (int i = 0; i < len; i++)
-    {
-        if (isalpha(word[i]))
-        {
-            hash_value += toupper(word[i]) - 'A';
-        }
-    }
+    // for (int i = 0; i < len; i++)
+    // {
+    //     if (isalpha(word[i]))
+    //     {
+    //         hash_value += toupper(word[i]) - 'A';
+    //     }
+    // }
 
-    return hash_value;
+    // return hash_value;
+    return toupper(word[0]) - 'A';
 }
 
 // Loads dictionary into memory, returning true if successful, else false

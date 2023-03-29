@@ -56,6 +56,7 @@ unsigned int hash(const char *word)
     {
         hash_value += toupper(word[0]) - 'A';
     }
+    printf("Hash value is %d of %s", hash_value, word);
 
     return hash_value;
 }

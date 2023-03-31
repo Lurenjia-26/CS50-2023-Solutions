@@ -30,12 +30,12 @@ int main(void)
     int n;
     scanf("%d", &n);
 
-    for (int i = 1; i < n / 2; i++)
+    for (int i = 1; i < n; i++)
     {
-        for (int j = 1; j < n / 2; j++)
+        for (int j = 1; j < n; j++)
         {
             if (2 * i == i + j && isPrime(i) && isPrime(j))
-            printf("%d=%d+%d\n", 2 * i, i, j);
+                printf("%d=%d+%d\n", 2 * i, i, j);
         }
     }
 

@@ -19,7 +19,7 @@ void mul(int t)
 
 void add()
 {
-    for (int i = 1; i < 100; i++)
+    for (int i = 0; i < 100; i++)
     {
         s[i] += a[i];
         if (s[i] >= 10)

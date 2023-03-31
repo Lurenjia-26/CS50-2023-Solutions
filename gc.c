@@ -27,6 +27,11 @@ void add()
     }
 }
 
+void output()
+{
+    
+}
+
 int main(void)
 {
     scanf("%d", &n);

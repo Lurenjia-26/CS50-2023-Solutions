@@ -25,10 +25,6 @@ void add()
     for (int i = 0; i < 100; i++)
     {
         s[i] += a[i];
-
-    }
-    for (int i = 0; i < 100; i++)
-    {
         if(s[i] > 9)
         {
             s[i + 1] += s[i] / 10;
@@ -42,10 +38,10 @@ void output()
     int i;
     for (i = 100; i >= 0; i--)
     {
-        if(s[i])
+        if(s[i] != 0)
             break;
     }
-    for (int j = i; j >= 0; j--)
+    for (int j = 0; j <= i; j++)
     {
         printf("%d", s[j]);
     }
@@ -55,7 +51,8 @@ int main(void)
 {
     scanf("%d", &n);
     a[0] = 1;
-    for (int i = 1; i <= n; i++)
+    s[0] = 1;
+    for (int i = 2; i <= n; i++)
     {
         mul(i);
         add();

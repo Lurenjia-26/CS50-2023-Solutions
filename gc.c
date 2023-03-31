@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-void f(int *a, int n)
+void f(int *a, int *b, int n)
 {
     for (int i = 1; i < 60; i++)
     {
-        
+
     }
 
     return;

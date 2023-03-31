@@ -6,10 +6,9 @@ int a[101] = {0};
 
 void mul(int t)
 {
-    int x = 0;
     for (int i = 0; i < 100; i++)
     {
-        a[i] = a[i] * t + x;
+        a[i] = a[i] * t;
         if (a[i] >= 10)
         {
             a[i + 1] += a[i] / 10;
@@ -20,7 +19,6 @@ void mul(int t)
 
 void add()
 {
-    a[0] = 1;
     for (int i = 1; i < 100; i++)
     {
         s[i] += a[i];
@@ -50,7 +48,7 @@ int main(void)
 {
     scanf("%d", &n);
     a[0] = 1;
-    for (int i = 2; i <= n; i++)
+    for (int i = 1; i <= n; i++)
     {
         mul(i);
         add();

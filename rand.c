@@ -15,7 +15,7 @@ int main(void)
     int cnt = s(a, l);
 
     printf("%d\n", cnt);
-    for (int i = 0; i < cnt; i++)
+    for (int i = 0; i < l; i++)
     {
         if (a[i])
         {

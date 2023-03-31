@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdbool.h>
-#include <math.h>
 
 unsigned long long f(int n)
 {
@@ -16,9 +14,9 @@ unsigned long long f(int n)
 void sf(int n)
 {
     unsigned long long sum = 0;
-    for (int i = 0; i <= n; i++)
+    for (int i = 1; i <= n; i++)
     {
-        sum += f(n);
+        sum += f(i);
     }
     printf("%lld", sum);
 }

@@ -36,7 +36,10 @@ int main(void)
             for (int j = 1; j < n; j++)
             {
                 if (2 * k == i + j && isPrime(i) && isPrime(j))
+                {
                     printf("%d=%d+%d\n", 2 * k, i, j);
+                    k++;
+                }
             }
         }
     }

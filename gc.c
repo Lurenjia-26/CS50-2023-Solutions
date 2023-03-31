@@ -18,7 +18,7 @@ void sf(int n)
     {
         sum += f(i);
     }
-    printf("%lld", sum);
+    printf("%llu\n", sum);
 }
 
 int main(void)

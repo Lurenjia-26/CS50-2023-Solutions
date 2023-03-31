@@ -29,17 +29,15 @@ int main(void)
 {
     int n;
     scanf("%d", &n);
-    for (int k = 4; k <= n; k += 2)
+    for (int i = 2; i <= n; i += 2)
     {
-        for (int i = 2; i <= k / 2; i++)
+        for (int j = 2; j < i; j++)
         {
-            for (int j = 2; j < k; j++)
+            int k = i - j;
+            if (isPrime(j) && isPrime(k))
             {
-                if (k == i + j && isPrime(i) && isPrime(j))
-                {
-                    printf("%d=%d+%d\n", k, i, j);
-                    break;
-                }
+                printf("%d=%d+%d\n", i, j, k);
+                break;
             }
         }
     }

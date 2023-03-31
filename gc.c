@@ -1,24 +1,34 @@
 #include <stdio.h>
 
-unsigned long long f(int n)
+void f(int *a, int n)
 {
-    unsigned long long result = 1;
-    for (int i = 1; i <= n; i++)
+    for (int i = 1; i < 60; i++)
     {
-        result *= i;
+        
     }
 
-    return result;
+    return;
 }
 
 void sf(int n)
 {
-    unsigned long long sum = 0;
-    for (int i = 1; i <= n; i++)
+    int sum[60] = {-1};
+    int a[60] = {0};
+
+    for (int i = 1; i < 60; i++)
     {
-        sum += f(i);
+        f(i);
     }
-    printf("%llu\n", sum);
+
+    for (int i = 0; i < 60; i++)
+    {
+        if (sum[i] != -1)
+        {
+            printf("%d",sum[i]);
+        }
+    }
+
+    return;
 }
 
 int main(void)

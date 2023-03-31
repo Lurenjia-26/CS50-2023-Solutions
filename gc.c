@@ -10,8 +10,11 @@ void mul(int t)
     for (int i = 0; i < 60; i++)
     {
         a[i] = a[i] * t + x;
-        x = a[i] / 10;
-        a[i] %= 10;
+        if (a[i] >= 10)
+        {
+            x = a[i] / 10;
+            a[i] %= 10;
+        }
     }
 }
 

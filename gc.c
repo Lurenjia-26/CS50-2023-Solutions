@@ -1,18 +1,18 @@
 #include <stdio.h>
 
 int n;
-int s[60] = {0};
-int a[60] = {0};
+int s[101] = {0};
+int a[101] = {0};
 
 void mul(int t)
 {
     int x = 0;
-    for (int i = 0; i < 60; i++)
+    for (int i = 0; i < 100; i++)
     {
         a[i] = a[i] * t + x;
         if (a[i] >= 10)
         {
-            x = a[i] / 10;
+            a[i + 1] += a[i] / 10;
             a[i] %= 10;
         }
     }
@@ -20,20 +20,22 @@ void mul(int t)
 
 void add()
 {
-    int x = 0;
     a[0] = 1;
-    for (int i = 1; i < 60; i++)
+    for (int i = 1; i < 100; i++)
     {
-        s[i] += a[i] + x;
-        x = s[i] / 10;
-        s[i] %= 10;
+        s[i] += a[i];
+        if (s[i] >= 10)
+        {
+            s[i + 1] += s[i] / 10;
+            s[i] %= 10;
+        }
     }
 }
 
 void output()
 {
     int i;
-    for (i = 59; i >= 0; i--)
+    for (i = 100; i >= 0; i--)
     {
         if(s[i])
             break;
@@ -48,7 +50,7 @@ int main(void)
 {
     scanf("%d", &n);
     a[0] = 1;
-    for (int i = 1; i <= n; i++)
+    for (int i = 2; i <= n; i++)
     {
         mul(i);
         add();

@@ -31,14 +31,14 @@ int main(void)
     scanf("%d", &n);
     for (int k = 1; k < n / 2 + 1; k++)
     {
-        for (int i = 1; i < n / 2; i++)
+        for (int i = 2; i < n / 2; i++)
         {
-            for (int j = 1; j < n; j++)
+            for (int j = 2; j < n; j++)
             {
                 if (2 * k == i + j && isPrime(i) && isPrime(j))
                 {
                     printf("%d=%d+%d\n", 2 * k, i, j);
-                    k++;
+                    break;
                 }
             }
         }

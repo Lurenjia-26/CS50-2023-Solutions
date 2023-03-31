@@ -38,6 +38,7 @@ int main(void)
                 if (2 * k == i + j && isPrime(i) && isPrime(j))
                 {
                     printf("%d=%d+%d\n", 2 * k, i, j);
+                    break;
                 }
             }
         }

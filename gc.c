@@ -14,7 +14,7 @@ bool isPrime(int n)
     }
 
     int sq = (int)sqrt(n);
-    for (int i = 5; i < sq; i += 6)
+    for (int i = 5; i <= sq; i += 6)
     {
         if (n % i == 0 || n % (i + 2) == 0)
         {

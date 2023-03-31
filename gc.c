@@ -8,7 +8,7 @@ void mul(int t)
 {
     for (int i = 0; i < 100; i++)
     {
-        a[i] = a[i] * t;
+        a[i] *= t;
         if (a[i] >= 10)
         {
             a[i + 1] += a[i] / 10;

@@ -41,7 +41,7 @@ void output()
         if(s[i] != 0)
             break;
     }
-    for (int j = 0; j <= i; j++)
+    for (int j = i; j >= 0; j--)
     {
         printf("%d", s[j]);
     }

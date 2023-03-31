@@ -9,9 +9,6 @@ void mul(int t)
     for (int i = 0; i < 100; i++)
     {
         a[i] *= t;
-    }
-    for (int i = 0; i < 100; i++)
-    {
         if(a[i] > 9)
         {
             a[i + 1] += s[i] / 10;

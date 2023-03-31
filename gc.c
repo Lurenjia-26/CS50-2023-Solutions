@@ -18,7 +18,8 @@ void mul(int t)
 void add()
 {
     int x = 0;
-    for (int i = 0; i < 60; i++)
+    a[0] = 1;
+    for (int i = 1; i < 60; i++)
     {
         s[i] += a[i] + x;
         x = s[i] / 10;

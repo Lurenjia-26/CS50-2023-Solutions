@@ -15,9 +15,25 @@ void mul(int t)
     }
 }
 
+void add()
+{
+    int x = 0;
+    for (int i = 0; i < 60; i++)
+    {
+        s[i] += a[i] + x;
+        x = s[i] / 10;
+        s[i] %= 10;
+    }
+}
+
 int main(void)
 {
     scanf("%d", &n);
+    for (int i = 2; i <= n; i++)
+    {
+        mud(i);
+        add();
+    }
     output();
 
     return 0;

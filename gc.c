@@ -31,7 +31,7 @@ int main(void)
     scanf("%d", &n);
     for (int k = 4; k <= n; k += 2)
     {
-        for (int i = 2; i < k / 2; i++)
+        for (int i = 2; i <= k / 2; i++)
         {
             for (int j = 2; j < k; j++)
             {

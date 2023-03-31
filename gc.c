@@ -2,13 +2,16 @@
 
 int n;
 int s[60] = {0};
-int a[60] = {1};
+int a[60] = {0};
 
 void mul(int t)
 {
+    int x = 0;
     for (int i = 0; i < 60 i++)
     {
-        a[i] = 
+        a[i] = a[i] * t + x;
+        x = a[i] / 10;
+        a[i] %= 10;
     }
 }
 

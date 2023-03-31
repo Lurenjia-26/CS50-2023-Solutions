@@ -29,7 +29,7 @@ int main(void)
 {
     int n;
     scanf("%d", &n);
-    for (int k = 1; k < n / 2 + 1; k++)
+    for (int k = 1; k < n / 2 + 2; k++)
     {
         for (int i = 2; i < k; i++)
         {

@@ -5,6 +5,8 @@ def main():
 def mario(n):
     for i in range(n):
         for j in range(n):
-            print(f"#")
+            if i <= j:
+                print("#",end="")
+        print("")
 
 main()

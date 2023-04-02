@@ -2,6 +2,6 @@ import random
 LENGTH = 10
 
 def randLicense():
-    set(license)
+    license = set()
     for i in range(LENGTH):
-        
+        license.add(random.randint(0, 9000))

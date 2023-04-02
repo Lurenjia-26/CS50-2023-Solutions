@@ -17,10 +17,10 @@ def randLicense():
 
 
 def est(li):
-    li = set(li)
+    li = list(set(li))
     max0 = 2 * sum(li) / len(li)
     max1 = max0
-    max2 = 
+    max2 = li[0] -
 
 
 main()

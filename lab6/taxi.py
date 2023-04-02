@@ -7,7 +7,7 @@ def main():
 
 
 def randLicense():
-    li = set()
+    li = list()
     while True:
         li.add(random.randint(0, 9000))
         if (len(li) == LENGTH):
@@ -16,9 +16,10 @@ def randLicense():
 
 
 def est(li):
+    li.sort()
     max0 = 2 * sum(li) / len(li)
     max1 = max0
-    max2 = 
+    max2 =
 
 
 main()

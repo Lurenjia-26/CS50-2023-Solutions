@@ -22,7 +22,7 @@ def est(li):
     li = list(li)
     li.sort()
     max0 = 2 * sum(li) / len(li)
-    max1 = 2 * li[int(LENGTH / 2)]
+    max1 = li[int(LENGTH / 2)] + li[int(LENGTH / 2 - 1)]
     max2 = li[LENGTH - 1] + (li[0] - MIN)
     max3 = 0
     print(li)

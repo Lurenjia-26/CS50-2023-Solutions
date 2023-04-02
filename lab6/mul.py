@@ -1,7 +1,23 @@
 import random
 LENGTH = 10
 
+
+def main():
+    randLicense()
+    estimate()
+
+
 def randLicense():
     license = set()
-    for i in range(LENGTH):
+    while True:
         license.add(random.randint(0, 9000))
+        if (len(license) == LENGTH):
+            break
+    return
+
+
+def estimate():
+    
+
+
+main()

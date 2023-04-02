@@ -2,12 +2,6 @@ import random
 LENGTH = 10
 
 
-def main():
-    randLicense()
-    for i in license:
-        print(i)
-
-
 def randLicense():
     license = set()
     while True:
@@ -17,4 +11,6 @@ def randLicense():
     return
 
 
-main()
+randLicense()
+for i in iter(license):
+    print(i)

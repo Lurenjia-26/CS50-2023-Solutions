@@ -1,7 +1,7 @@
 import random
 LENGTH = 10
-MIN = 400
-MAX = 2000
+MIN = 0
+MAX = 200
 
 
 def main():
@@ -18,8 +18,8 @@ def randLicense():
 
 
 def est():
-    print("Avg\t\tMedian\t\tGap\t\tAvg Gap")
-    for i in range(5):
+
+    for i in range(1):
         li = list(randLicense())
         li.sort()
 
@@ -28,7 +28,8 @@ def est():
         max2 = li[LENGTH - 1] + li[0] - MIN
         max3 = int((1 + 1 / (LENGTH)) * li[LENGTH - 1])
 
-        # print(li)
+        print(li)
+        print("Avg\t\tMedian\t\tGap\t\tAvg Gap")
         print(f"{max0}\t\t{max1}\t\t{max2}\t\t{max3}")
 
     print(f"Answer: {MAX}")

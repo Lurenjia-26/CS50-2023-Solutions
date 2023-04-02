@@ -1,4 +1,7 @@
 import random
 LENGTH = 10
 
-def randLicense
+def randLicense():
+    set(license)
+    for i in range(LENGTH):
+        

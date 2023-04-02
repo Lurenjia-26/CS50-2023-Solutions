@@ -2,15 +2,17 @@ import random
 LENGTH = 10
 
 
+def main():
+    li = randLicense()
+
+
 def randLicense():
-    license = set()
+    li = set()
     while True:
-        license.add(random.randint(0, 9000))
-        if (len(license) == LENGTH):
+        li.add(random.randint(0, 9000))
+        if (len(li) == LENGTH):
             break
-    return
+    return li
 
 
-randLicense()
-for i in iter(license):
-    print(i)
+main()

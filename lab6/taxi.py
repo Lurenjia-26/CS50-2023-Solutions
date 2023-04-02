@@ -26,8 +26,8 @@ def est(li):
     max2 = li[LENGTH - 1] + (li[0] - MIN)
     max3 = 0
     print(li)
-    print("Avg\t Median\t    Gap\t  Avg Gap")
-    print(f"{max0}\t {max1}\t    {max2}\t  {max3}")
+    print("Avg\t\tMedian\t\tGap\t\tAvg Gap")
+    print(f"{max0}\t\t{max1}\t\t{max2}\t\t{max3}")
 
 
 main()

@@ -16,7 +16,9 @@ def randLicense():
 
 
 def est(li):
-    max = sum(li) / len(li)
+    max0 = 2 * sum(li) / len(li)
+    max1 = max0
+    max2 = 
 
 
 main()

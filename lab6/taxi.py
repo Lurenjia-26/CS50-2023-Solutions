@@ -1,7 +1,7 @@
 import random
 LENGTH = 10
-MIN = 0
-MAX = 1000
+MIN = 400
+MAX = 2000
 
 
 def main():

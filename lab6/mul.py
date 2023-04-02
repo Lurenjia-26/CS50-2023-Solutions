@@ -6,7 +6,6 @@ def main():
     randLicense()
     for i in license:
         print(i)
-    estimate()
 
 
 def randLicense():
@@ -16,10 +15,6 @@ def randLicense():
         if (len(license) == LENGTH):
             break
     return
-
-
-def estimate():
-
 
 
 main()

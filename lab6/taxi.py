@@ -5,8 +5,7 @@ MAX = 1000
 
 
 def main():
-    li = randLicense()
-    est(li)
+    est()
 
 
 def randLicense():
@@ -18,10 +17,10 @@ def randLicense():
     return li
 
 
-def est(li):
+def est():
     print("Avg\t\tMedian\t\tGap\t\tAvg Gap")
     for i in range(5):
-        li = list(li)
+        li = list(randLicense())
         li.sort()
 
         max0 = 2 * sum(li) / len(li)

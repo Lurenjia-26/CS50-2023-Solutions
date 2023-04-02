@@ -4,6 +4,8 @@ LENGTH = 10
 
 def main():
     randLicense()
+    for i in license:
+        print(i)
     estimate()
 
 
@@ -17,7 +19,7 @@ def randLicense():
 
 
 def estimate():
-    
+
 
 
 main()

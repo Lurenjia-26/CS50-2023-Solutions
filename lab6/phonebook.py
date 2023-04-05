@@ -5,7 +5,7 @@ with open("phonebook.csv", "a") as file:
         name = input("Name: ")
         number = input("Number: ")
 
-        if number == -1:
+        if number == "-1":
             break
 
         writer = csv.writer(file)

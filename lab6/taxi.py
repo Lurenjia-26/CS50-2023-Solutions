@@ -25,7 +25,7 @@ def est():
         li.sort()
 
         max0 = 2 * sum(li) / len(li)
-        max1 = li[int(LENGTH / 2)] + li[int(LENGTH / 2 - 1)]
+        max1 = li[int(LENGTH / 2)] + li[int((LENGTH / 2) - 1)]
         max2 = li[LENGTH - 1] + li[0] - MIN
         max3 = int((1 + 1 / (LENGTH)) * li[LENGTH - 1])
 

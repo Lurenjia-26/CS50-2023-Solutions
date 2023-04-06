@@ -1,8 +1,7 @@
 h = int(input("Height: "))
 
 for i in range(h):
-    for j in range(h):
-        if j < h - i - 1:
-            print(" ", end="")
-        else:
-            print("#", end="")
+    print(" " * (h - i - 1), end="")
+    print("#" * (i + 1), end="")
+    print(" ", end="")
+    print("#" * (i + 1))

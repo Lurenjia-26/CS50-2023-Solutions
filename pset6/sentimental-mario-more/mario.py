@@ -1,6 +1,7 @@
 # TODO
 while True:
-    h = int(input("Height: "))
+    h = input("Height: ")
+    if (h)
     if (h in range(0, 9)):
         break
     print("h should in (1, 8)")

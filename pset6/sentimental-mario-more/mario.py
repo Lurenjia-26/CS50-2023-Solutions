@@ -7,6 +7,7 @@ while True:
     except ValueError:
         print("foo")
 
+
 for i in range(h):
     print(" " * (h - i - 1), end="")
     print("#" * (i + 1), end="")

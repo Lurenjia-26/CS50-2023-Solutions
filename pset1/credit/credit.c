@@ -21,6 +21,7 @@ int main(void)
         a[digits] = tmp_num % 10;
         tmp_num /= 10;
     }
+
     // 隔一位乘2并求和
     for (int i = 1; i < digits; i += 2)
     {
@@ -33,11 +34,13 @@ int main(void)
             sum += a[i] / 5 + (a[i] * 2) % 10;
         }
     }
+
     // 与未乘的数加起来
     for (int i = 0; i < digits; i += 2)
     {
         sum += a[i];
     }
+    
     //有效性判断
     if (sum % 10 != 0)
     {

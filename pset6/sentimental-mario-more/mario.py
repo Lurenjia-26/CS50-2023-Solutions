@@ -1,9 +1,9 @@
 # TODO
 while True:
-    h = input("Height: ")
+    h = int(input("Height: "))
     if (h in range(0, 9)):
         break
-    print("h should in (1, 8)")
+    print("foo")
 
 for i in range(h):
     print(" " * (h - i - 1), end="")

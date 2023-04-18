@@ -10,7 +10,7 @@ def main():
         sys.exit(1)
 
     # TODO: Read database file into a variable
-    with open(sys.argv[1],"r") as db:
+    with open(sys.argv[1], "r") as db:
         db_reader = csv.reader(db)
         data = list(db_reader)
 

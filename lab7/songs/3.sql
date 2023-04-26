@@ -1,3 +1,4 @@
 SELECT name
 FROM songs
-ORDER BY  DESC;
+ORDER BY duration_ms DESC
+LIMIT 5;

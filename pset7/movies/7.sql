@@ -1,5 +1,5 @@
 SELECT ratings.rating, movies.title
-FROM movies
-INNER JOIN ratings ON movies.id = ratings.Movie_id
+FROM ratings
+INNER JOIN movies ON movies.id = ratings.movie_id
 WHERE movies.year = 2010
-ORDER BY ratings.rating, movies.title DESC;
+ORDER BY ratings.rating, movies.title ASC;

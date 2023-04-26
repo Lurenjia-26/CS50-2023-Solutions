@@ -1,2 +1,2 @@
-SELECT SUM(energy)/COUNT(energy) AS average_energy
+SELECT AVG(energy) AS average_energy
 FROM songs;

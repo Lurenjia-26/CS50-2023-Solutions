@@ -1,0 +1,4 @@
+We can characterize their audio aura by calculating the average energy,
+valence, and danceability of those songs. Energy is a measure of how fast and loud a song sounds,
+valence is a measure of the positivity or negativity of the song's emotional content,
+and danceability is a measure of how suitable a song is for dancing based on its rhythm, tempo, and beat.

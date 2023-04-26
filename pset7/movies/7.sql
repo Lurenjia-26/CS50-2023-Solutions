@@ -1,4 +1,4 @@
-SELECT rating
+SELECT title, rating
 FROM ratings
 WHERE movie_id IN (
     SELECT id

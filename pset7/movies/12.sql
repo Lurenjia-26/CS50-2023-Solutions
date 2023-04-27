@@ -1,7 +1,12 @@
-SELECT title, rating
-FROM movies, stars, ratings, people
+SELECT title
+FROM movies, stars, people
 WHERE stars.person_id = people.id
 AND stars.movie_id = movies.id
-AND people.name = "Chadwick Boseman"
-ORDER BY rating DESC
-LIMIT 10;
+AND people.name = "Johnny Depp"
+AND title IN (
+    SELECT title
+    FROM movies, stars, people
+    WHERE stars.person_id = people.id
+    AND stars.movie_id = movies.id
+    AND people.name = "Helena Bonham Carter"
+);

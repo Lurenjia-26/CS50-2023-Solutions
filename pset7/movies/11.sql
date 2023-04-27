@@ -5,4 +5,4 @@ AND stars.movie_id = movies.id
 AND ratings.movie_id = movies.id
 AND people.name = "Chadwick Boseman"
 ORDER BY rating DESC
-LIMIT 10;
+LIMIT 5;

@@ -1,9 +1,5 @@
-SELECT name FROM movie, stars, people
-WHERE id IN (
-    SELECT stars.person_id FROM stars
-    WHERE stars.person_id = people.id
-    AND stars.movie_id IN (
-        SELECT id FROM movies
-        WHERE title = "Toy Story"
-    )
-);
+SELECT name
+FROM movies, stars, people
+WHERE stars.person_id = people.id
+AND stars.movie_id = movies.id
+AND title = "Toy Story";

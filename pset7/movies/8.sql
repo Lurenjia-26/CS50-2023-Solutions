@@ -1,4 +1,4 @@
-SELECT name FROM people
+SELECT name FROM movie, stars, people
 WHERE id IN (
     SELECT stars.person_id FROM stars
     WHERE stars.person_id = people.id

@@ -101,7 +101,7 @@ SELECT name
             FROM airports
             WHERE city = "Fiftyville"
         )
-            ORDER BY hour
+            ORDER BY hour ASC
             LIMIT 1
     )
 )

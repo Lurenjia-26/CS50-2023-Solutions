@@ -151,12 +151,18 @@ FROM people
 WHERE phone_number = '(375) 555-8161';
 
 -- Destination is NYC
-SELECT 
-    (
-    SELECT flight_id
-    FROM passengers
-    WHERE passport_number IN (
-        SELECT passport_number
-        FROM people
-        WHERE name = 'Bruce'
-    ));
+SELECT city
+FROM airports
+WHERE id IN (
+    SELECT destination_airport_id
+    FROM flights
+    WHERE id IN (
+        SELECT flight_id
+        FROM passengers
+        WHERE passport_number IN (
+            SELECT passport_number
+            FROM people
+            WHERE name = 'Bruce'
+        )
+    )
+);

@@ -56,7 +56,7 @@ ORDER BY name;
 
 -- I don't know the thief's name, but it was someone I recognized. Earlier this morning, before I arrived at Emma's bakery,
 -- I was walking by the ATM on Leggett Street and saw the thief there withdrawing some money.
--- Find the person who withdraws money on Leggett Street.
+-- Find the person who withdrew money on Leggett Street.
 SELECT name
 FROM people, bank_accounts
 WHERE people.id = bank_accounts.person_id
@@ -66,6 +66,7 @@ AND account_number IN (
     WHERE month = 7
     AND day = 28
     AND hour = 10
-
+    AND atm_location = 'Leggett Street'
+    AND transaction_type = 'withdraw'
 )
 ORDER BY name;

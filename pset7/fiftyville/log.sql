@@ -7,4 +7,9 @@
 --Get more information about this table
 .schema crime_scene_reports
 
---
+--Search for descriptions of crime on a particular day and particular street
+SELECT description
+FROM crime_scene_reports
+WHERE month = 7
+AND day = 21
+AND street = 'Humphrey Street';

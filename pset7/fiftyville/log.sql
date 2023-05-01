@@ -85,3 +85,24 @@ ORDER BY name;
 -- As the thief was leaving the bakery, they called someone who talked to them for less than a minute.
 -- In the call, I heard the thief say that they were planning to take the earliest flight out of Fiftyville tomorrow.
 -- The thief then asked the person on the other end of the phone to purchase the flight ticket.
+-- The thief bought the earliest ticket for tomorrow
+SELECT name
+  FROM people
+ WHERE passport_number IN (
+    SELECT passport_number
+    FROM passengers
+    WHERE flight_id IN (
+        SELECT id
+        FROM flights
+        WHERE month = 7
+        AND day = 29
+        AND origin_airport_id IN (
+            SELECT id
+            FROM airports
+            WHERE city = "Fiftyville"
+        )
+            ORDER BY hour
+            LIMIT 1
+    )
+)
+ ORDER BY name;

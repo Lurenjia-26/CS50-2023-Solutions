@@ -45,13 +45,13 @@ ORDER BY name;
 -- |  name   |
 -- +---------+
 -- | Vanessa |
+-- | Bruce   |
 -- | Barry   |
+-- | Diana   |
 -- | Iman    |
 -- | Sofia   |
 -- | Luca    |
--- | Diana   |
 -- | Kelsey  |
--- | Bruce   |
 -- +---------+
 
 -- I don't know the thief's name, but it was someone I recognized. Earlier this morning, before I arrived at Emma's bakery,

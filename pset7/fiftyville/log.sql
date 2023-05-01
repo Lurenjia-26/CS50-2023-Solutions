@@ -44,14 +44,14 @@ ORDER BY name;
 -- +---------+
 -- |  name   |
 -- +---------+
--- | Bruce   |
--- | Barry   |
--- | Diana   |
--- | Iman    |
--- | Kelsey  |
--- | Luca    |
--- | Sofia   |
--- | Vanessa |
+-- | Barry   |1
+-- | Bruce   |1
+-- | Diana   |1
+-- | Iman    |1
+-- | Kelsey  |1
+-- | Luca    |1
+-- | Sofia   |1
+-- | Vanessa |1
 -- +---------+
 
 -- I don't know the thief's name, but it was someone I recognized. Earlier this morning, before I arrived at Emma's bakery,
@@ -72,14 +72,14 @@ ORDER BY name;
 -- +---------+
 -- |  name   |
 -- +---------+
--- | Benista |
--- | Brooke  |
--- | Bruce   |
--- | Diana   |
--- | Iman    |
--- | Kenny   |
--- | Luca    |
--- | Taylor  |
+-- | Benista | 2
+-- | Brooke  | 2
+-- | Bruce   |12
+-- | Diana   |12
+-- | Iman    |12
+-- | Kenny   | 2
+-- | Luca    |12
+-- | Taylor  | 2
 -- +---------+
 
 -- As the thief was leaving the bakery, they called someone who talked to them for less than a minute.
@@ -110,14 +110,14 @@ SELECT name
 -- +--------+
 -- |  name  |
 -- +--------+
--- | Bruce  |
--- | Doris  |
--- | Edward |
--- | Kelsey |
--- | Kenny  |
--- | Luca   |
--- | Sofia  |
--- | Taylor |
+-- | Bruce  |123
+-- | Doris  |  3
+-- | Edward |  3
+-- | Kelsey |1 3
+-- | Kenny  | 23
+-- | Luca   |123
+-- | Sofia  |1 3
+-- | Taylor | 23
 -- +--------+
 
 -- Find people who called less than a minute that day.

@@ -122,4 +122,7 @@ SELECT name
 
 -- Find people who called less than a minute that day.
 SELECT name
-FROM 
+FROM people
+WHERE phone_number IN (
+    SELECT 
+)

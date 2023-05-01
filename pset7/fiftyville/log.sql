@@ -132,7 +132,8 @@ WHERE phone_number IN (
 )
 ORDER BY name;
 -- Bruce!
--- Bruce called
+
+-- Bruce called (375) 555-8161
 SELECT *
 FROM people
 WHERE name = 'Bruce';
@@ -143,3 +144,10 @@ WHERE month = 7
 AND day = 28
 AND caller = '(367) 555-5533'
 AND duration < 60;
+
+-- (375) 555-8161 is Robin!
+SELECT *
+FROM people
+WHERE phone_number = '(375) 555-8161';
+
+-- They 

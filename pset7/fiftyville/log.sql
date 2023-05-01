@@ -99,10 +99,10 @@ SELECT name
         AND origin_airport_id IN (
             SELECT id
             FROM airports
-            WHERE city = "Fiftyville"
+            WHERE city = 'Fiftyville'
         )
-            ORDER BY hour ASC
-            LIMIT 1
+        ORDER BY hour ASC
+        LIMIT 1
     )
 )
  ORDER BY name;

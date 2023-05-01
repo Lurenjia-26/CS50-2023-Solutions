@@ -121,9 +121,9 @@ SELECT name
 -- +--------+
 
 -- Find people who called less than a minute that day.
-SELECT name
+SELECT name, caller
 FROM people
-JOIN
+INNER JOIN phone_calls
 WHERE phone_number IN (
     SELECT caller
     FROM phone_calls

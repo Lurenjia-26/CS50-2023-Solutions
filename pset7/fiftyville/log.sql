@@ -61,6 +61,11 @@ SELECT name
 FROM people, bank_accounts
 WHERE people.id = bank_accounts.person_id
 AND account_number IN (
-    SELECT 
+    SELECT account_number
+    FROM atm_transcations
+    WHERE month = 7
+    AND day = 28
+    AND hour = 10
+    
 )
 ORDER BY name;

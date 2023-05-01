@@ -62,10 +62,21 @@ FROM people, bank_accounts
 WHERE people.id = bank_accounts.person_id
 AND account_number IN (
     SELECT account_number
-    FROM atm_transcations
+    FROM atm_transactions
     WHERE month = 7
     AND day = 28
-    AND hour = 10
+    AND atm_location = 'Leggett Street'
+    AND transaction_type = 'withdraw'
+)
+ORDER BY name;
+SELECT name
+FROM people, bank_accounts
+WHERE people.id = bank_accounts.person_id
+AND account_number IN (
+    SELECT account_number
+    FROM atm_transactions
+    WHERE month = 7
+    AND day = 28
     AND atm_location = 'Leggett Street'
     AND transaction_type = 'withdraw'
 )

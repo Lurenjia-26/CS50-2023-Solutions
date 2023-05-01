@@ -25,7 +25,9 @@ AND month = 7
 AND day = 28
 AND transcript LIKE '%bakery%';
 
+
 -- Find all the people who got out of the parking lot
+
 SELECT name
 FROM people
 WHERE license_plate IN (
@@ -36,5 +38,17 @@ WHERE license_plate IN (
     AND hour = 10
     AND minute > 15
     AND minute <= 25
-    AND activity = exit
-)
+    AND activity = 'exit'
+);
+-- +---------+
+-- |  name   |
+-- +---------+
+-- | Vanessa |
+-- | Barry   |
+-- | Iman    |
+-- | Sofia   |
+-- | Luca    |
+-- | Diana   |
+-- | Kelsey  |
+-- | Bruce   |
+-- +---------+

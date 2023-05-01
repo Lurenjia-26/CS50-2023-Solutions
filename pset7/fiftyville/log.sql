@@ -18,7 +18,7 @@ AND street = 'Humphrey Street';
 .schema interviews
 
 -- View the interview records of three witnesses
-SELECT *
+SELECT name, transcript
 FROM interviews
 WHERE year = 2021
 AND month = 7

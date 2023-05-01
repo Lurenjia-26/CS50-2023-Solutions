@@ -26,4 +26,13 @@ AND day = 28
 AND transcript LIKE "%thief%";
 
 -- Find all the people who got out of the parking lot
-SELECT
+SELECT name
+FROM people
+WHERE license_plate IN (
+    SELECT license_plate
+    FROM bakery_security_logs
+    WHERE month = 7
+    AND day = 28
+    AND hour = 10
+    AND minute > 
+)

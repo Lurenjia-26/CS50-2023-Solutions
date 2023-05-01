@@ -60,4 +60,4 @@ ORDER BY name;
 SELECT name
 FROM people, bank_accounts
 WHERE people.id = bank_accounts.person_id
-AND
+AND 

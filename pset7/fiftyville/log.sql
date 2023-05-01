@@ -39,7 +39,8 @@ WHERE license_plate IN (
     AND minute > 15
     AND minute <= 25
     AND activity = 'exit'
-);
+)
+ORDER BY name;
 -- +---------+
 -- |  name   |
 -- +---------+
@@ -55,4 +56,4 @@ WHERE license_plate IN (
 
 -- I don't know the thief's name, but it was someone I recognized. Earlier this morning, before I arrived at Emma's bakery,
 -- I was walking by the ATM on Leggett Street and saw the thief there withdrawing some money.
--- 
+-- Find the person who withdraws money on Leggett Street that day.

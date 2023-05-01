@@ -120,3 +120,6 @@ SELECT name
 -- | Taylor |
 -- +--------+
 
+-- Find people who called less than a minute that day.
+SELECT name
+FROM 

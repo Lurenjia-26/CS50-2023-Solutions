@@ -124,5 +124,22 @@ SELECT name
 SELECT name
 FROM people
 WHERE phone_number IN (
-    SELECT 
+    SELECT caller
+    FROM phone_calls
+    WHERE month = 7
+    AND day = 28
+    AND duration < 60
 )
+ORDER BY name;
+-- +---------+
+-- |  name   |
+-- +---------+
+-- | Benista |
+-- | Bruce   |
+-- | Carina  |
+-- | Diana   |
+-- | Kelsey  |
+-- | Kenny   |
+-- | Sofia   |
+-- | Taylor  |
+-- +---------+

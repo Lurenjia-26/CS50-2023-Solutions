@@ -136,3 +136,10 @@ ORDER BY name;
 SELECT *
 FROM people
 WHERE name = 'Bruce';
+
+SELECT receiver
+FROM phone_calls
+WHERE month = 7
+AND day = 28
+AND caller = '(367) 555-5533'
+AND duration < 60;

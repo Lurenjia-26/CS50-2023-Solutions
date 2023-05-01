@@ -94,7 +94,8 @@ SELECT name
     WHERE flight_id IN (
         SELECT id
         FROM flights
-        WHERE month = 7
+        WHERE year = 2021
+        AND month = 7
         AND day = 29
         AND origin_airport_id IN (
             SELECT id
@@ -106,3 +107,16 @@ SELECT name
     )
 )
  ORDER BY name;
+-- +--------+
+-- |  name  |
+-- +--------+
+-- | Bruce  |
+-- | Doris  |
+-- | Edward |
+-- | Kelsey |
+-- | Kenny  |
+-- | Luca   |
+-- | Sofia  |
+-- | Taylor |
+-- +--------+
+

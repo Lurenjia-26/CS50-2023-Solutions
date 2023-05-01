@@ -131,15 +131,5 @@ WHERE phone_number IN (
     AND duration < 60
 )
 ORDER BY name;
--- +---------+
--- |  name   |
--- +---------+
--- | Benista |
--- | Bruce   |
--- | Carina  |
--- | Diana   |
--- | Kelsey  |
--- | Kenny   |
--- | Sofia   |
--- | Taylor  |
--- +---------+
+-- Bruce!
+-- Bruce called

@@ -23,7 +23,7 @@ FROM interviews
 WHERE year = 2021
 AND month = 7
 AND day = 28
-AND transcript LIKE "%thief%";
+AND transcript LIKE '%bakery%';
 
 -- Find all the people who got out of the parking lot
 SELECT name

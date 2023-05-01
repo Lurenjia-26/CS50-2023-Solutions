@@ -121,9 +121,8 @@ SELECT name
 -- +--------+
 
 -- Find people who called less than a minute that day.
-SELECT name, caller
+SELECT name
 FROM people
-INNER JOIN phone_calls
 WHERE phone_number IN (
     SELECT caller
     FROM phone_calls
@@ -134,3 +133,6 @@ WHERE phone_number IN (
 ORDER BY name;
 -- Bruce!
 -- Bruce called
+SELECT *
+FROM people
+WHERE name = 'Bruce';

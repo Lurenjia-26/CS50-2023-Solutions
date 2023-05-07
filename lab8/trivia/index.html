@@ -6,6 +6,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
     <title>Trivia!</title>
+    <script>
+        // TODO: Add code to check answers to questions
+        document.addEventListener("DOMContentLoaded", () => {
+
+            let yep = document.querySelector("#yep");
+            let foo = document.querySelector("#foo");
+            let text1 = document.getElementById("text1");
+
+            yep.addEventListener("click", () => {
+                yep.style.backgroundColor = "green";
+                text1.innerText = "Correct!";
+            });
+
+            foo.addEventListener("click", () => {
+                foo.style.backgroundColor = "red";
+                text1.innerText = "Foo~";
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -20,9 +39,9 @@
             <!-- TODO: Add multiple choice question here -->
             <h3>What is the approximate ratio of people to kangaroos in Australia</h3>
             <p id="text1"></p>
-            <button id="foo">4 people per 1 kangaroo</button>
+            <!-- <button id="foo">4 people per 1 kangaroo</button>
             <button id="foo">2 people per 1 kangaroo</button>
-            <button id="foo">1 people per 1 kangaroo</button>
+            <button id="foo">1 people per 1 kangaroo</button> -->
             <button id="yep">1 people per 2 kangaroos</button>
             <button id="foo">1 people per 4 kangaroos</button>
         </div>
@@ -37,22 +56,6 @@
             <button>Check answer</button>
         </div>
     </div>
-
-    <script>
-        // TODO: Add code to check answers to questions
-        // document.addEventListener("DOMContentLoaded", () => {
-
-        let yep = document.querySelector("#yep");
-        let foo = document.querySelectorAll("#foo");
-        let text1 = getElementById("text1");
-        document.write("Hello");
-
-        yep.addEventListener("click", () => {
-            yep.style.backgroundColor = "green"
-            text1.innerText = "Correct!"
-        });
-        //});
-    </script>
 </body>
 
 </html>

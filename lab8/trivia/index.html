@@ -11,7 +11,7 @@
         document.addEventListener("DOMContentLoaded", () => {
 
             let yep = document.querySelector("#yep");
-            let foo = document.querySelector("#foo");
+            let no = document.querySelector("#no");
             let text1 = document.getElementById("text1");
 
             yep.addEventListener("click", () => {
@@ -19,9 +19,9 @@
                 text1.innerText = "Correct!";
             });
 
-            foo.addEventListener("click", () => {
-                foo.style.backgroundColor = "red";
-                text1.innerText = "Foo~";
+            no.addEventListener("click", () => {
+                no.style.backgroundColor = "red";
+                text1.innerText = "Oh no!";
             });
         });
     </script>
@@ -39,11 +39,11 @@
             <!-- TODO: Add multiple choice question here -->
             <h3>What is the approximate ratio of people to kangaroos in Australia</h3>
             <p id="text1"></p>
-            <!-- <button id="foo">4 people per 1 kangaroo</button>
-            <button id="foo">2 people per 1 kangaroo</button>
-            <button id="foo">1 people per 1 kangaroo</button> -->
+            <!-- <button id="no">4 people per 1 kangaroo</button>
+            <button id="no">2 people per 1 kangaroo</button>
+            <button id="no">1 people per 1 kangaroo</button> -->
             <button id="yep">1 people per 2 kangaroos</button>
-            <button id="foo">1 people per 4 kangaroos</button>
+            <button id="no">1 people per 4 kangaroos</button>
         </div>
 
         <div class="section">

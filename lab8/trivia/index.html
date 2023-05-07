@@ -11,7 +11,7 @@
         document.addEventListener("DOMContentLoaded", () => {
 
             let yep = document.querySelector("#yep");
-            let no = document.querySelector("#no");
+            let nope = document.querySelector("#nope");
             let text1 = document.getElementById("text1");
 
             yep.addEventListener("click", () => {
@@ -19,8 +19,8 @@
                 text1.innerText = "Correct!";
             });
 
-            no.addEventListener("click", () => {
-                no.style.backgroundColor = "red";
+            nope.addEventListener("click", () => {
+                nope.style.backgroundColor = "red";
                 text1.innerText = "Oh no!";
             });
         });
@@ -39,18 +39,18 @@
             <!-- TODO: Add multiple choice question here -->
             <h3>What is the approximate ratio of people to kangaroos in Australia</h3>
             <p id="text1"></p>
-            <!-- <button id="no">4 people per 1 kangaroo</button>
-            <button id="no">2 people per 1 kangaroo</button>
-            <button id="no">1 people per 1 kangaroo</button> -->
+            <button id="nope">4 people per 1 kangaroo</button>
+            <button id="nope">2 people per 1 kangaroo</button>
+            <button id="nope">1 people per 1 kangaroo</button>
             <button id="yep">1 people per 2 kangaroos</button>
-            <button id="no">1 people per 4 kangaroos</button>
+            <button id="nope">1 people per 4 kangaroos</button>
         </div>
 
         <div class="section">
             <h2>Part 2: Free Response</h2>
             <hr>
             <!-- TODO: Add free response question here -->
-            <h3>Which is the river which does not have any bridges across it?</h3>
+            <h3>Which is the river which does nopet have any bridges across it?</h3>
             <p id="text2"></p>
             <input type="text">
             <button>Check answer</button>

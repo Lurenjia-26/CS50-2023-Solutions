@@ -10,9 +10,12 @@
             document.addEventListener('DOMContentLoaded', function() {
                 let yep = document.querySelector('#yep').value;
                 let foo = document.querySelectorAll('#foo').value;
-                let text1 = getElementById;
+                let text1 = getElementById('text1');
 
-                yep.addEventListener('click', )
+                yep.addEventListener('click', function() {
+                    yep.styleBackgroundColor = 'green';
+                    text1.innerText = 'Correct!';
+                });
             });
         </script>
     </head>
@@ -27,12 +30,12 @@
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
                 <h3>What is the approximate ratio of people to kangaroos in Australia</h3>
-                <p></p>
-                <button type="submit" id="foo">4 people per 1 kangaroo</button>
-                <button type="submit" id="foo">2 people per 1 kangaroo</button>
-                <button type="submit" id="foo">1 people per 1 kangaroo</button>
-                <button type="submit" id="yep">1 people per 2 kangaroos</button>
-                <button type="submit" id="foo">1 people per 4 kangaroos</button>
+                <p  id="text1"></p>
+                <button id="foo">4 people per 1 kangaroo</button>
+                <button id="foo">2 people per 1 kangaroo</button>
+                <button id="foo">1 people per 1 kangaroo</button>
+                <button id="yep">1 people per 2 kangaroos</button>
+                <button id="foo">1 people per 4 kangaroos</button>
             </div>
 
             <div class="section">
@@ -40,7 +43,8 @@
                 <hr>
                 <!-- TODO: Add free response question here -->
                 <h3>Which is the river which does not have any bridges across it?</h3>
-                <input type="text" id="text1">
+                <p id="text2"></p>
+                <input type="text">
                 <button>Check answer</button>
             </div>
         </div>

@@ -30,7 +30,12 @@
 
             check.addEventListener("click", () => {
                 let input = document.querySelector("input");
-                if (input.value.toUpperCase() in "AMAZON")
+                if (input.value.toUpperCase() == "AMAZON") {
+                    text2.innerText = "Correct!";
+                }
+                else {
+                    text2.innerText = "Incorrect!";
+                }
             });
         });
     </script>

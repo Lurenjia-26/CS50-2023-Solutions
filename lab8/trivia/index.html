@@ -11,7 +11,7 @@
         document.addEventListener("DOMContentLoaded", () => {
 
             let yep = document.querySelector("#yep");
-            let nope = document.querySelector("#nope");
+            let nope = document.querySelectorAll("#nope");
             let text1 = document.getElementById("text1");
 
             yep.addEventListener("click", () => {
@@ -19,10 +19,12 @@
                 text1.innerText = "Correct!";
             });
 
-            nope.addEventListener("click", () => {
-                nope.style.backgroundColor = "lightred";
-                text1.innerText = "Oh no!";
+            for (let i = 0; i < nope.len(); i++) {
+                nope[i].addEventListener("click", () => {
+                nope[i].style.backgroundColor = "pink";
+                text1.innerText = "Incorrect!";
             });
+            }
         });
     </script>
 </head>

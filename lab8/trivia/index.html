@@ -12,6 +12,7 @@
 
             let yep = document.querySelector("#yep");
             let nope = document.querySelectorAll("#nope");
+            let check = document.querySelector("#check");
             let text1 = document.getElementById("text1");
             let text2 = document.getElementById("text2");
 
@@ -26,6 +27,11 @@
                     text1.innerText = "Incorrect!";
                 });
             }
+
+            check.addEventListener("click", () => {
+                let input =
+                text1.innerText = "Correct!";
+            });
         });
     </script>
 </head>
@@ -56,7 +62,7 @@
             <h3>Which is the river which does nopet have any bridges across it?</h3>
             <p id="text2"></p>
             <input type="text">
-            <button>Check answer</button>
+            <button id="check">Check answer</button>
         </div>
     </div>
 </body>

@@ -2,8 +2,7 @@
 
 int main()
 {
-    char *p = "abcdef";
-    p[1] = 'B';
-    printf("%s", p);
+    int *p = 0;
+    printf("%d", *p);
     return 0;
 }

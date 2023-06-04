@@ -1,13 +1,140 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-        <link href="styles.css" rel="stylesheet">
-        <title>My Webpage</title>
-    </head>
-    <body>
-        na
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Tools</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav id="nav" class="navbar navbar-expand-md mx-lg-2 my-0">
+      <div class="container-xxl">
+        <a href="index.html" class="navbar-brand">
+          <span id="title">Tools</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#main-navbar"
+          aria-controls="main-navbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="main-navbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html#main">Main</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="IDEs.html">IDEs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Editors.html">Editors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Ohters.html">Others</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="main">
+      <div class="container-lg">
+        <h1 class="text-center text-md-start">Setting up a Coding Environment for CS</h1>
+
+        <hr />
+
+        <h1 class="text-center text-md-start">Languages</h1>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card shadow h-100">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">C</h5>
+                <p class="card-text">
+                  C is very fast, compared to other programming languages, like Java and Python. It
+                  can be used in both applications and technologies
+                </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><a href="IDEs.html#C/C++">Visual Studio</a></li>
+                <li class="list-group-item"><a href="Editors.html#C/C++">VS Code</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow h-100">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">C++</h5>
+                <p class="card-text">
+                  C++ is a general-purpose object-oriented programming language created by Bjarne
+                  Stroustrup as an extension of the C programming language. It's widely used for
+                  game and web development, machine learning...
+                </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><a href="IDEs.html#C/C++">Visual Studio</a></li>
+                <li class="list-group-item"><a href="Editors.html#C/C++">VS Code</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow h-100">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Python</h5>
+                <p class="card-text">
+                  Python was built with the goal of getting rid of the complex and keeping only the
+                  necessary. Because of this, Python is easier to read, write, and learn than most
+                  other major programming languages.
+                </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><a href="IDEs.html#Python">Pycharm</a></li>
+                <li class="list-group-item"><a href="Editors.html#Python">VS Code</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow h-100">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Java</h5>
+                <p class="card-text">
+                  Java follows a fundamental principle that worked well for Java to date. The "Write
+                  Once, and Run Anywhere" principle. Now, Java uses a software tool that comes along
+                  with the Java download file. It is called the Java Virtual Machine (JVM).
+                </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><a href="IDEs.html#Java">IDEA</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

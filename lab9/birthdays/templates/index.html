@@ -36,6 +36,12 @@
                     </thead>
                     <tbody>
                         <!-- TODO: Loop through the database entries to display them in this table -->
+                        {% for b in birthdays %}
+                            <tr>
+                                <td>b.name</td>
+                                <td>b.month/b.day</td>
+                            </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>

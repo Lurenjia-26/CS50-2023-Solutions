@@ -13,6 +13,10 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 db = SQL("sqlite:///birthdays.db")
 
 
+def insert(name, day, month):
+    
+
+
 @app.after_request
 def after_request(response):
     """Ensure responses aren't cached"""
@@ -27,7 +31,9 @@ def index():
     if request.method == "POST":
 
         # TODO: Add the user's entry into the database
-        
+        name = request.form.get("name")
+        month = request.form.get("month")
+        day = request.form.get("day")
 
         return redirect("/")
 

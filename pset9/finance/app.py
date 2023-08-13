@@ -136,11 +136,19 @@ def register():
             return apology("username already exists", 400)
 
         # Insert into database
-        db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", request.form.get("username"), )
+        db.execute("INSERT INTO users (username, hash) VALUES(?, ?)",
+                   request.form.get("username"), generate_password_hash(request.form.get("password")))
+
+        # Query database for username
+        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+
+        # Remember which user has logged in
+        session["user_id"] = rows[0]["id"]
+
+        # Redirect user to home page
+        return redirect("/")
     else:
         return render_template("register.html")
-
-    return apology("TODO")
 
 
 @app.route("/sell", methods=["GET", "POST"])

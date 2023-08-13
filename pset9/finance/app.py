@@ -115,7 +115,7 @@ def quote():
         if not quotes:
             return apology("invalid symbol", 400)
 
-        return render_template("quote.html", quotes=quotes)
+        return render_template("quoted.html", quotes=quotes)
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:

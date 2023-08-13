@@ -109,13 +109,13 @@ def quote():
 
         # Look up a stock’s current price
         symbol = request.form.get("symbol")
-        quotes = lookup(symbol)
+        quote = lookup(symbol)
 
         # Ensure symbol is valid
-        if not quotes:
+        if not quote:
             return apology("invalid symbol", 400)
 
-        return render_template("quoted.html", quotes=quotes)
+        return render_template("quoted.html", quote=quote)
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:

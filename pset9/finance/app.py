@@ -107,7 +107,7 @@ def quote():
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
 
-        # 
+        # Look up a stock’s current price
         symbol = request.form.get("symbol")
         quotes = lookup(symbol)
 

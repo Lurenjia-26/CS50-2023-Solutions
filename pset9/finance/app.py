@@ -103,7 +103,13 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
-    return apology("TODO")
+
+    # User reached route via POST (as by submitting a form via POST)
+    if request.method == "POST":
+        return render_template
+    # User reached route via GET (as by clicking a link or via redirect)
+    else:
+        return render_template("register.html")
 
 
 @app.route("/register", methods=["GET", "POST"])

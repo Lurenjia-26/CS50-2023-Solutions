@@ -42,6 +42,12 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
+
+    if request.method == "POST"
+
+    else:
+        return render_
+
     return apology("TODO")
 
 

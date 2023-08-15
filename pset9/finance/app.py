@@ -50,10 +50,12 @@ def buy():
 
         if not symbol:
             return apology("missing symbol")
+        if not shares:
+            return apology("missing shares")
+
+
     else:
         return render_template("buy.html")
-
-    return apology("TODO")
 
 
 @app.route("/history")

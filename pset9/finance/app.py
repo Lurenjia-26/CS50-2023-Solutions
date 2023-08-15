@@ -53,7 +53,16 @@ def buy():
         if not shares:
             return apology("missing shares")
 
+        quote = lookup(symbol)
+        if quote == None:
+            return apology("invalid symbol")
 
+        price = quote.price
+        cost = price * shares
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
+
+        if cash < cost:
+            return apology("cannot afford")
     else:
         return render_template("buy.html")
 

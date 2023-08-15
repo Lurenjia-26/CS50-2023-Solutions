@@ -45,7 +45,11 @@ def buy():
 
     if request.method == "POST":
 
-        
+        symbol = request.form.get("symbol").upper()
+        shares = request.form.get("shares")
+
+        if not symbol:
+            return apology("missing symbol")
     else:
         return render_template("buy.html")
 

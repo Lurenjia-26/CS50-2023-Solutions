@@ -5,5 +5,26 @@
 {% endblock %}
 
 {% block main %}
-    
+
+    <main class="container py-5 text-center">
+        <table class="table table-striped">
+            <thead>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Transacted</th>
+            </thead>
+            <tbody>
+                {% for t in trans %}
+                    <tr>
+                        <td>{{ t["symbol"] }}</td>
+                        <td>{{ t["shares"] }}</td>
+                        <td>{{ t["price"] | usd }}</td>
+                        <td>{{ t["timestamp"] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+
 {% endblock %}

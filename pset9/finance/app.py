@@ -45,24 +45,32 @@ def buy():
 
     if request.method == "POST":
 
+        # Get symbol and shares
         symbol = request.form.get("symbol").upper()
         shares = request.form.get("shares")
 
+        # Check symbol and shares
         if not symbol:
             return apology("missing symbol")
         if not shares:
             return apology("missing shares")
-
         quote = lookup(symbol)
         if quote == None:
             return apology("invalid symbol")
 
+        # Get price
         price = quote.price
         cost = price * shares
-        cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
+        cash = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])[0]["cash"]
 
         if cash < cost:
             return apology("cannot afford")
+
+        # Update user's cash
+        db.execute("UPDATE users SET cash = cash - ? WHERE id = ?;", cost, session["user_id"])
+
+        # Add to history
+        db.execute("INSERT INTO ")
     else:
         return render_template("buy.html")
 
@@ -93,7 +101,7 @@ def login():
             return apology("must provide password", 403)
 
         # Query database for username
-        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+        rows = db.execute("SELECT * FROM users WHERE username = ?;", request.form.get("username"))
 
         # Ensure username exists and password is correct
         if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
@@ -171,18 +179,18 @@ def register():
             return apology("password and confirmation do not match", 400)
 
         # Query database for username
-        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+        rows = db.execute("SELECT * FROM users WHERE username = ?;", request.form.get("username"))
 
         # Ensure username do not exists
         if len(rows) != 0:
             return apology("username already exists", 400)
 
         # Insert into database
-        db.execute("INSERT INTO users (username, hash) VALUES(?, ?)",
+        db.execute("INSERT INTO users (username, hash) VALUES(?, ?);",
                    request.form.get("username"), generate_password_hash(request.form.get("password")))
 
         # Query database for username
-        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+        rows = db.execute("SELECT * FROM users WHERE username = ?;", request.form.get("username"))
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]

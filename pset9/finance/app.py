@@ -235,6 +235,9 @@ def register():
 def sell():
     """Sell shares of stock"""
 
+    # Get user's stocks
+    stocks = db.execute("")
+
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
 

@@ -236,7 +236,8 @@ def sell():
     """Sell shares of stock"""
 
     # Get user's stocks
-    stocks = db.execute("")
+    stocks = db.execute("SELECT symbol, SUM(shares) AS total_shares FROM transactions WHERE user_id = ? GROUP BY symbol;", session["user_id"])
+
 
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":

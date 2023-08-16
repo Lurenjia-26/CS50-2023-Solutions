@@ -244,11 +244,19 @@ def sell():
 
         symbol = request.form.get("symbol").upper()
         shares = request.form.get("shares")
+
         if not symbol:
-            
+            return apology("missing symbol")
+        elif not shares or not shares.isdigit() or int(shares) <= 0:
+            return apology("shares must be a positive number")
+        else:
+            shares = int(shares)
 
+        for stock in stocks:
+            if stock["total_shares"]
 
-        return apology("TODO")
+        flash("Sold!")
+        return redirect("/")
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:

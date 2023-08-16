@@ -5,6 +5,6 @@ CREATE TABLE
         symbol TEXT NOT NULL,
         shares INTEGER NOT NULL,
         price NUMERIC NOT NULL,
-        timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+        timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
         FOREIGN KEY (user_id) REFERENCES users(id)
     );

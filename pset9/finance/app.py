@@ -253,7 +253,8 @@ def sell():
             shares = int(shares)
 
         for stock in stocks:
-            if stock["total_shares"]
+            if stock["total_shares"] < shares:
+                
 
         flash("Sold!")
         return redirect("/")

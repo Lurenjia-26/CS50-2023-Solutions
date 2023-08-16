@@ -35,6 +35,9 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
+
+    # Get user's stocks
+    stocks = db.execute("SELECT symbol, SUM(shares) AS total_shares, ")
     return apology("TODO")
 
 

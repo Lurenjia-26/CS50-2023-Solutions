@@ -100,7 +100,9 @@ def buy():
 def history():
     """Show history of transactions"""
 
-    trans = db.execute("SELECT symbol, shares, price, timestamp FROM transactions WHERE user_id = ?;", session["user_id"])
+    # Get transactions
+    trans = db.execute("SELECT symbol, shares, price, timestamp FROM transactions WHERE user_id = ?;",
+                       session["user_id"])
 
     return render_template("history.html", trans=trans)
 
@@ -230,4 +232,8 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    return apology("TODO")
+
+    if request.method == "POST":
+        return apology("TODO")
+    else
+        return render_template("sell.html")

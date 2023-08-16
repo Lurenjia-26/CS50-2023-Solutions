@@ -73,7 +73,9 @@ def buy():
         db.execute("INSERT INTO transactions (user_id, symbol, shares, price) VALUES (user_id, symbol, shares, price)", session["user_id"], symbol, shares, price)
 
         # Alert
-        flash("")
+        flash("Bought!")
+        return redirect("/")
+    
     else:
         return render_template("buy.html")
 

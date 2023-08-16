@@ -70,7 +70,10 @@ def buy():
         db.execute("UPDATE users SET cash = cash - ? WHERE id = ?;", cost, session["user_id"])
 
         # Add to history
-        db.execute("INSERT INTO ")
+        db.execute("INSERT INTO transactions (user_id, symbol, shares, price) VALUES (user_id, symbol, shares, price)", session["user_id"], symbol, shares, price)
+
+        # Alert
+        flash("")
     else:
         return render_template("buy.html")
 

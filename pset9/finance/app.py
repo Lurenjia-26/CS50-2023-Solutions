@@ -47,7 +47,7 @@ def buy():
 
         # Get symbol and shares
         symbol = request.form.get("symbol").upper()
-        shares = request.form.get("shares")
+        shares = int(request.form.get("shares"))
 
         # Check symbol and shares
         if not symbol:

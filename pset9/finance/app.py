@@ -100,7 +100,7 @@ def buy():
 def history():
     """Show history of transactions"""
 
-    db.execute("SELECT symbol, shares, price, timestamp")
+    trans = db.execute("SELECT symbol, shares, price, timestamp FROM transactions WHERE user_id = ?;", session["user_id"])
 
     return render_template("history.html", trans=trans)
 

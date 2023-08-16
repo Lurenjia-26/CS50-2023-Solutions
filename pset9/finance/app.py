@@ -59,7 +59,7 @@ def buy():
             return apology("invalid symbol")
 
         # Get price
-        price = quote.price
+        price = quote["price"]
         cost = price * shares
         cash = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])[0]["cash"]
 

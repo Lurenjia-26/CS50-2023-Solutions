@@ -252,12 +252,10 @@ def sell():
         else:
             shares = int(shares)
 
-        for stock in stocks:
-            if stock["symbol"] == symbol:
-                if stock["total_shares"] < shares:
-                    return apology("too many shares", 400)
-                else:
-                    quote = lookup(symbol)
+        total_shares = db.execute("SELECT SUM(shares) FROM transactions WHERE id")
+        if total_shares < shares:
+            return apology("too many shares", 400)
+
 
 
         flash("Sold!")

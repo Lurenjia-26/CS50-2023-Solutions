@@ -264,7 +264,7 @@ def sell():
             )
 
         sold = stock[0]["price"] * shares
-        cash = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])[0]["cahs"]
+        cash = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])[0]["cash"]
         db.execute(
             "UPDATE users SET cash = ? WHERE id = ?;", cash + sold, session["user_id"]
         )

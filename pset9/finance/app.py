@@ -252,11 +252,18 @@ def sell():
         else:
             shares = int(shares)
 
-        total_shares = db.execute("SELECT SUM(shares) FROM transactions WHERE id")
-        if total_shares < shares:
+        stock = db.execute("SELECT symbol, SUM(shares) AS total_shares FROM transactions WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
+
+        if stock[0]["total_shares"] < shares:
             return apology("too many shares", 400)
 
-
+        db.execute(
+                "INSERT INTO transactions (user_id, symbol, shares, price) VALUES (?, ?, ?, ?)",
+                session["user_id"],
+                symbol,
+                -shares,
+                stock[0]["price"],
+            )
 
         flash("Sold!")
         return redirect("/")

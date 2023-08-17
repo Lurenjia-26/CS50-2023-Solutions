@@ -67,12 +67,12 @@ def buy():
 
         # Check symbol and shares
         if not symbol:
-            return apology("missing symbol")
+            return apology("missing symbol", 400)
         if not shares:
-            return apology("missing shares")
+            return apology("missing shares", 400)
         quote = lookup(symbol)
         if quote == None:
-            return apology("invalid symbol")
+            return apology("invalid symbol", 400)
 
         # Get price
         price = quote["price"]
@@ -80,7 +80,7 @@ def buy():
         cash = db.execute("SELECT cash FROM users WHERE id = ?;", session["user_id"])[0]["cash"]
 
         if cash < cost:
-            return apology("cannot afford")
+            return apology("cannot afford", 400)
 
         # Update user's cash
         db.execute("UPDATE users SET cash = cash - ? WHERE id = ?;", cost, session["user_id"])
@@ -246,16 +246,18 @@ def sell():
         shares = request.form.get("shares")
 
         if not symbol:
-            return apology("missing symbol")
+            return apology("missing symbol", 400)
         elif not shares or not shares.isdigit() or int(shares) <= 0:
-            return apology("shares must be a positive number")
+            return apology("shares must be a positive number", 400)
         else:
             shares = int(shares)
 
         for stock in stocks:
             if stock["symbol"] == symbol:
                 if stock["total_shares"] < shares:
-                    return apology("")
+                    return apology("too many shares", 400)
+                else:
+                    quote = lookup(symbol)
 
 
         flash("Sold!")

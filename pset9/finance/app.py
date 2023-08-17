@@ -237,10 +237,6 @@ def register():
 def sell():
     """Sell shares of stock"""
 
-    # Get user's stocks
-    stocks = db.execute("SELECT symbol, SUM(shares) AS total_shares FROM transactions WHERE user_id = ? GROUP BY symbol;", session["user_id"])
-
-
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
 
@@ -254,7 +250,7 @@ def sell():
         else:
             shares = int(shares)
 
-        stock = db.execute("SELECT symbol, SUM(shares) AS total_shares FROM transactions WHERE user_id = ? AND symbol = ?;", session["user_id"], symbol)
+        stock = db.execute("SELECT symbol, SUM(shares) AS total_shares, price FROM transactions WHERE user_id = ? AND symbol = ?;", session["user_id"], symbol)
 
         if stock[0]["total_shares"] < shares:
             return apology("too many shares", 400)

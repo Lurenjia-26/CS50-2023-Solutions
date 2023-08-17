@@ -7,15 +7,14 @@
 {% block main %}
 
     <form action="/sell" method="post">
-        <div class="input-group mb-3 mx-auto w-auto">
-            <select name="symbol" class="form-select">
+        <div class="mb-3">
+            <select name="symbol" class="form-select mx-auto w-auto">
                 <option selected disabled>Choose...</option>
                 {% for s in symbols %}
                 <option value="{{ s.symbol }}">{{ s["symbol"] }}</option>
                 {% endfor %}
             </select>
         </div>
-
         <div class="mb-3">
             <input class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="Shares" type="number" min="1">
         </div>

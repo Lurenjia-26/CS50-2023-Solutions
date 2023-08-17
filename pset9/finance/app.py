@@ -63,13 +63,15 @@ def buy():
 
         # Get symbol and shares
         symbol = request.form.get("symbol").upper()
-        shares = int(request.form.get("shares"))
+        shares = request.form.get("shares")
 
         # Check symbol and shares
         if not symbol:
             return apology("missing symbol", 400)
-        if not shares:
-            return apology("missing shares", 400)
+        elif not shares or not shares.isdigit() or int(shares) <= 0:
+            return apology("shares must be a positive number", 400)
+        else:
+            shares = int(shares)
         quote = lookup(symbol)
         if quote == None:
             return apology("invalid symbol", 400)

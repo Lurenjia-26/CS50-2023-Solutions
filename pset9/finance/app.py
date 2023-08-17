@@ -276,4 +276,5 @@ def sell():
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
-        return render_template("sell.html")
+        symbols = db.execute("SELECT symbol FROM transactions WHERE user_id = ? GROUP BY symbol;", session["user_id"])
+        return render_template("sell.html", symbols=symbols)

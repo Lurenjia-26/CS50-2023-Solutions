@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% block title %}
+    Schedule
+{% endblock title %}
+{% block body %}
+    <div class="container-fluid">
+        <h3 class="fw-bolder text-secondary mt-3 d-flex align-items-center justify-content-center">
+            <form action="/prev_week" method="get">
+                <button type="submit" class="btn btn-secondary mx-1">
+                    <
+                </button>
+            </form>
+            Course Schedule
+            <form action="/next_week" method="get">
+                <button type="submit" class="btn btn-secondary mx-1">></button>
+            </form>
+        </h3>
+        <div class="col text-center">
+            <table class="table align-middle table-bordered">
+                {% with week_list = ["一","二","三","四","五","六","日"] %}
+                    <tr>
+                        {% for i in range(7) %}
+                            {% if i == 0 %}
+                                {% if 0 < week_number < 21 %}
+                                    <td>{{ week_number }}</td>
+                                {% else %}
+                                    <td>&nbsp;</td>
+                                {% endif %}
+                            {% endif %}
+                            {% if week_data[i] == this_day %}
+                                <td class="fw-bolder text-primary">
+                                    {{ week_list[i] }}
+                                    <br />
+                                    {{ week_data[i] }}
+                                </td>
+                            {% else %}
+                                <td>
+                                    {{ week_list[i] }}
+                                    <br />
+                                    {{ week_data[i] }}
+                                </td>
+                            {% endif %}
+                        {% endfor %}
+                    </tr>
+                    {{ schedule|safe }}
+                {% endwith %}
+                <footer class="text-center">
+                </footer>
+            </table>
+        </div>
+        <div class="text-start my-1">
+            <form action="/add" method="get">
+                <button type="submit" class="btn btn-primary btn-sm">Add course</button>
+            </form>
+        </div>
+    </div>
+{% endblock body %}
